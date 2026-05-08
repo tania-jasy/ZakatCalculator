@@ -34,17 +34,19 @@
             // 
             // pnlRegLogin
             // 
-            this.pnlRegLogin.Location = new System.Drawing.Point(12, 100);
+            this.pnlRegLogin.Location = new System.Drawing.Point(9, 81);
+            this.pnlRegLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlRegLogin.Name = "pnlRegLogin";
-            this.pnlRegLogin.Size = new System.Drawing.Size(366, 386);
+            this.pnlRegLogin.Size = new System.Drawing.Size(274, 314);
             this.pnlRegLogin.TabIndex = 0;
             // 
             // cbReg
             // 
             this.cbReg.AutoSize = true;
-            this.cbReg.Location = new System.Drawing.Point(142, 74);
+            this.cbReg.Location = new System.Drawing.Point(106, 60);
+            this.cbReg.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbReg.Name = "cbReg";
-            this.cbReg.Size = new System.Drawing.Size(101, 20);
+            this.cbReg.Size = new System.Drawing.Size(82, 17);
             this.cbReg.TabIndex = 1;
             this.cbReg.Text = "Registration";
             this.cbReg.UseVisualStyleBackColor = true;
@@ -52,11 +54,13 @@
             // 
             // FormLoginReg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(390, 498);
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.ClientSize = new System.Drawing.Size(292, 405);
             this.Controls.Add(this.cbReg);
             this.Controls.Add(this.pnlRegLogin);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormLoginReg";
             this.Text = "Login and Registration";
             this.Load += new System.EventHandler(this.FormLoginReg_Load);

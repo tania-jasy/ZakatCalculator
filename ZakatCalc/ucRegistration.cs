@@ -58,5 +58,13 @@ namespace ZakatCalc
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private void cbShowPass_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbShowPass.Checked)
+            { txtPass.UseSystemPasswordChar = false; }
+            else
+            { txtPass.UseSystemPasswordChar = true; }
+        }
     }
 }

@@ -50,7 +50,7 @@ namespace FormStart
 
             try
             {
-                
+
                 Command = new SqlCommand(sql, connection);
                 Command.Parameters.AddWithValue("@Username", username);
                 reader = Command.ExecuteReader();
@@ -78,6 +78,12 @@ namespace FormStart
                     reader.Close();
                 }
             }
+        }
+        public void PopulateGridView(string query, string tableName, DataGridView dgv)
+        {
+            var Ds = ExecuteQuery(query, tableName);
+            dgv.AutoGenerateColumns = false;
+            dgv.DataSource = Ds.Tables[tableName];
         }
 
         public DataTable ExecuteQueryTable(string sql)

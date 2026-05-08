@@ -27,15 +27,23 @@ namespace ZakatCalc
             this.prevForm = Form1;
             this.name = username;
         }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void LoadControl(UserControl control)
         {
-
+            pnlHolder.Controls.Clear();
+            control.Dock = DockStyle.Fill;
+            pnlHolder.Controls.Add(control);
         }
-
         private void FormAdmin_Load(object sender, EventArgs e)
         {
             lblWelcome.Text = "Welcome\n " + name;
+        }
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            LoadControl(new ucUsers(name, prevForm));
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void FormAdmin_FormClosing(object sender, FormClosingEventArgs e)
@@ -53,5 +61,12 @@ namespace ZakatCalc
             this.Hide();
             prevForm.Show();
         }
+
+        private void lblWelcome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
