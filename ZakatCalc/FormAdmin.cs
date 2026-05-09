@@ -39,7 +39,11 @@ namespace ZakatCalc
         }
         private void btnUsers_Click(object sender, EventArgs e)
         {
-            LoadControl(new ucUsers(name, prevForm));
+            LoadControl(new ucUsers());
+        }
+        private void btnOrgs_Click(object sender, EventArgs e)
+        {
+            LoadControl(new ucOrganizations());
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -66,7 +70,6 @@ namespace ZakatCalc
         {
 
         }
-
 
     }
 }

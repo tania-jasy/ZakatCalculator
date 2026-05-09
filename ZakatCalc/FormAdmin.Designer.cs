@@ -51,7 +51,7 @@
             this.pnlButtonsContainer.Controls.Add(this.btnCalc);
             this.pnlButtonsContainer.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlButtonsContainer.Location = new System.Drawing.Point(0, 0);
-            this.pnlButtonsContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlButtonsContainer.Margin = new System.Windows.Forms.Padding(2);
             this.pnlButtonsContainer.Name = "pnlButtonsContainer";
             this.pnlButtonsContainer.Size = new System.Drawing.Size(210, 537);
             this.pnlButtonsContainer.TabIndex = 1;
@@ -60,7 +60,7 @@
             // 
             this.btnStats.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStats.Location = new System.Drawing.Point(9, 394);
-            this.btnStats.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStats.Margin = new System.Windows.Forms.Padding(2);
             this.btnStats.Name = "btnStats";
             this.btnStats.Size = new System.Drawing.Size(188, 39);
             this.btnStats.TabIndex = 12;
@@ -71,7 +71,7 @@
             // 
             this.btnSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.Location = new System.Drawing.Point(64, 497);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(2);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(88, 29);
             this.btnSignOut.TabIndex = 11;
@@ -83,7 +83,7 @@
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.Location = new System.Drawing.Point(68, 552);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(82, 25);
             this.btnLogout.TabIndex = 4;
@@ -94,12 +94,13 @@
             // 
             this.btnOrgs.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrgs.Location = new System.Drawing.Point(9, 333);
-            this.btnOrgs.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrgs.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrgs.Name = "btnOrgs";
             this.btnOrgs.Size = new System.Drawing.Size(188, 39);
             this.btnOrgs.TabIndex = 10;
             this.btnOrgs.Text = "Organizations";
             this.btnOrgs.UseVisualStyleBackColor = true;
+            this.btnOrgs.Click += new System.EventHandler(this.btnOrgs_Click);
             // 
             // lblWelcome
             // 
@@ -117,7 +118,7 @@
             // 
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.Location = new System.Drawing.Point(9, 277);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(188, 39);
             this.btnUsers.TabIndex = 9;
@@ -129,7 +130,7 @@
             // 
             this.btnCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalc.Location = new System.Drawing.Point(9, 223);
-            this.btnCalc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalc.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalc.Name = "btnCalc";
             this.btnCalc.Size = new System.Drawing.Size(188, 39);
             this.btnCalc.TabIndex = 8;
@@ -140,7 +141,7 @@
             // 
             this.pnlHolder.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlHolder.Location = new System.Drawing.Point(211, 0);
-            this.pnlHolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHolder.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHolder.Name = "pnlHolder";
             this.pnlHolder.Size = new System.Drawing.Size(677, 537);
             this.pnlHolder.TabIndex = 2;
@@ -153,7 +154,7 @@
             this.ClientSize = new System.Drawing.Size(888, 537);
             this.Controls.Add(this.pnlHolder);
             this.Controls.Add(this.pnlButtonsContainer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAdmin";
             this.Text = "Admin Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormAdmin_FormClosing);

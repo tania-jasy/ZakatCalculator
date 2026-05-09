@@ -79,6 +79,12 @@
     <Compile Include="ucLogin.Designer.cs">
       <DependentUpon>ucLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucOrganizations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOrganizations.Designer.cs">
+      <DependentUpon>ucOrganizations.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucRegistration.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucLogin.resx">
       <DependentUpon>ucLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOrganizations.resx">
+      <DependentUpon>ucOrganizations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucRegistration.resx">
       <DependentUpon>ucRegistration.cs</DependentUpon>
