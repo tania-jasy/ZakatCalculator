@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\ucorganizations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\ucorganizations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucorganizations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -78,7 +78,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 14,
           "Children": [
             {
               "$type": "Document",
@@ -102,8 +102,7 @@
               "RelativeToolTip": "ZakatCalc\\ucLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:12:31.582Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -127,8 +126,7 @@
               "RelativeToolTip": "ZakatCalc\\FormAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:12:27.006Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -140,8 +138,7 @@
               "RelativeToolTip": "ZakatCalc\\FormDonor.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:12:28.382Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -153,8 +150,7 @@
               "RelativeToolTip": "ZakatCalc\\ucDonorProfile.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:12:30.974Z",
-              "IsPinned": true,
-              "EditorCaption": " [Design]"
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -167,8 +163,7 @@
               "ViewState": "AgIAAE4AAAAAAAAAAAAYwD4AAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:12:33.757Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -194,8 +189,7 @@
               "ViewState": "AgIAABMAAAAAAAAAAAAmwDEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:49:54.352Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -221,8 +215,7 @@
               "ViewState": "AgIAABEAAAAAAAAAAAAQwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:52:05.6Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -235,8 +228,7 @@
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T19:52:25.477Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -249,8 +241,11 @@
               "ViewState": "AgIAAIUAAAAAAAAAAAAowHYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-08T22:16:42.335Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
@@ -274,12 +269,7 @@
               "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucOrganizations.cs [Design]",
               "RelativeToolTip": "ZakatCalc\\ucOrganizations.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-09T17:29:28.457Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+              "WhenOpened": "2026-05-09T17:29:28.457Z"
             },
             {
               "$type": "Document",
@@ -290,8 +280,7 @@
               "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucUsers.cs [Design]",
               "RelativeToolTip": "ZakatCalc\\ucUsers.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-08T19:59:49.757Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-05-08T19:59:49.757Z"
             },
             {
               "$type": "Document",
