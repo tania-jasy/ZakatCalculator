@@ -104,6 +104,22 @@ namespace FormStart
             return Ds;
         }
 
+        public int ExecuteScalar(string sql)
+        {
+            Command = new SqlCommand(sql, connection);
+            var result = Command.ExecuteScalar();
+
+            if (result != null)
+            {
+                int finalNumber = Convert.ToInt32(result);
+                return finalNumber;
+            }
+            else
+            {
+                return -1;
+            }
+        }
+
         public int ExecuteQuery(string sql)
         {
             Command = new SqlCommand(sql, connection);

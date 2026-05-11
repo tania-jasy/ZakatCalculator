@@ -3,16 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\ucorganizationsplit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucorganizationsplit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\ucorganizationsplit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucorganizationsplit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\ucdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\ucdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\ucorganizations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucorganizations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\ucdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucdonations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\ucdonations.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucdonations.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\formloginreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formloginreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\uclogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,26 +63,6 @@
       "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\dataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formdonor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\uccalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\formloginreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formloginreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -61,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\ucusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\ucusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\zakatcalc\\formloginreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|solutionrelative:zakatcalc\\formloginreg.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9F4A95DB-E902-4B67-8D8C-BDC20E12F2DE}|ZakatCalc\\ZakatCalc.csproj|c:\\users\\administrator\\documents\\strikesagain\\zakatcalculator\\zakatcalc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -78,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -90,33 +98,58 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ucDonations.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucDonations.Designer.cs",
-              "RelativeDocumentMoniker": "ZakatCalc\\ucDonations.Designer.cs",
-              "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucDonations.Designer.cs",
-              "RelativeToolTip": "ZakatCalc\\ucDonations.Designer.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAYwHEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ucOrganizationSplit.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucOrganizationSplit.cs",
+              "RelativeDocumentMoniker": "ZakatCalc\\ucOrganizationSplit.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucOrganizationSplit.cs",
+              "RelativeToolTip": "ZakatCalc\\ucOrganizationSplit.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAAAG0AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-11T11:40:05.69Z",
+              "WhenOpened": "2026-05-11T14:43:35.394Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "ucOrganizationSplit.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucOrganizationSplit.cs",
+              "RelativeDocumentMoniker": "ZakatCalc\\ucOrganizationSplit.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucOrganizationSplit.cs [Design]",
+              "RelativeToolTip": "ZakatCalc\\ucOrganizationSplit.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T14:07:45.968Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ucOrganizations.cs",
+              "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucOrganizations.cs",
+              "RelativeDocumentMoniker": "ZakatCalc\\ucOrganizations.cs",
+              "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucOrganizations.cs",
+              "RelativeToolTip": "ZakatCalc\\ucOrganizations.cs",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T14:43:27.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ucDonations.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucDonations.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucDonations.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucDonations.cs",
               "RelativeToolTip": "ZakatCalc\\ucDonations.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAAADsAAACRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-11T11:04:25.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ucDonations.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucDonations.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucDonations.cs",
@@ -128,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "FormLoginReg.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\FormLoginReg.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\FormLoginReg.cs",
@@ -141,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "ucLogin.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucLogin.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucLogin.cs",
@@ -154,20 +187,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "DataAccess.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\DataAccess.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\DataAccess.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\DataAccess.cs",
               "RelativeToolTip": "ZakatCalc\\DataAccess.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAmwFgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-11T07:24:05.522Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "ucLogin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucLogin.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucLogin.cs",
@@ -179,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "FormDonor.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\FormDonor.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\FormDonor.cs",
@@ -192,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 13,
               "Title": "FormAdmin.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\FormAdmin.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\FormAdmin.cs",
@@ -205,7 +238,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 14,
               "Title": "FormAdmin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\FormAdmin.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\FormAdmin.cs",
@@ -229,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "ucUsers.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucUsers.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucUsers.cs",
@@ -242,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "ucUsers.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucUsers.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucUsers.cs",
@@ -254,20 +287,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ucCalculator.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucCalculator.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucCalculator.cs",
               "ToolTip": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucCalculator.cs",
               "RelativeToolTip": "ZakatCalc\\ucCalculator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAvwLUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-11T07:45:11.853Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "ucCalculator.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\ucCalculator.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\ucCalculator.cs",
@@ -279,7 +312,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\Program.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\Program.cs",
@@ -291,7 +324,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 9,
               "Title": "FormLoginReg.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Administrator\\Documents\\strikesAgain\\ZakatCalculator\\ZakatCalc\\FormLoginReg.cs",
               "RelativeDocumentMoniker": "ZakatCalc\\FormLoginReg.cs",

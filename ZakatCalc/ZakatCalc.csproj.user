@@ -14,5 +14,8 @@
     <Compile Update="ucDonations.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucOrganizationSplit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

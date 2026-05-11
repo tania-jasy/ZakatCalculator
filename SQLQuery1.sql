@@ -30,6 +30,8 @@ VALUES
 -- View the results
 SELECT * FROM USERS;
 
+SELECT user_id FROM Users WHERE username = 'abc' AND password = '123'
+
 INSERT INTO USERS (username, password, contact_no, role, is_active) VALUES 
 ('yo', '123', '0101', 'admin', 1)
 
@@ -38,6 +40,8 @@ SELECT * FROM users WHERE Username = 'abc'
 USE Project;
 GO
 
+
+-- Creating the ORGANIZATIONS Table
 CREATE TABLE ORGANIZATIONS (
     org_id INT IDENTITY(1,1) PRIMARY KEY,
     name VARCHAR(150) NOT NULL,
@@ -50,10 +54,6 @@ CREATE TABLE ORGANIZATIONS (
 );
 GO
 
-USE Project;
-GO
-
--- CREATING THE TABLE FOR ORGANIZATION
 
 INSERT INTO ORGANIZATIONS (name, category, contact_phone, bank_details, is_active, is_verified)
 VALUES 
@@ -93,3 +93,83 @@ GO
 
 -- View the newly inserted organizations
 SELECT * FROM ORGANIZATIONS;
+
+
+
+--CREATING A TABLE FOR METAL PRICES
+USE Project;
+GO
+CREATE TABLE METAL_PRICES (
+    Id INT PRIMARY KEY DEFAULT 1,
+    GoldPrice DECIMAL(18, 2) NOT NULL,
+    SilverPrice DECIMAL(18, 2) NOT NULL,
+    LastUpdated DATETIME DEFAULT GETDATE(),
+    -- This constraint ensures only ONE row can ever exist in this table
+    CONSTRAINT CHK_SingleRow CHECK (Id = 1) 
+);
+
+INSERT INTO METAL_PRICES (Id, GoldPrice, SilverPrice, LastUpdated)
+                VALUES (1, 20980, 317, GETDATE());
+
+select * from METAL_PRICES
+
+--CREATING THE DONATION TABLE
+USE Project;
+GO
+
+CREATE TABLE DONATIONS (
+    donation_id INT IDENTITY(1,1) PRIMARY KEY,
+    user_id INT NOT NULL, -- The donor
+    total_amount DECIMAL(15,2) NOT NULL,
+    payment_method VARCHAR(50), -- e.g., 'bkash', 'Nagad', 'Cash', 'Bank'
+    transaction_ref VARCHAR(100), -- Manual reference number
+    donated_at DATETIME DEFAULT GETDATE(),
+
+    -- Foreign Key to link to the USERS table
+    CONSTRAINT FK_UserDonation FOREIGN KEY (user_id) 
+    REFERENCES USERS(user_id) ON DELETE NO ACTION
+);
+GO
+
+--Demo data entry for donation table
+INSERT INTO DONATIONS (user_id, total_amount, payment_method, transaction_ref)
+VALUES (10, 5000.00, 'bKash', 'TRX99887766');
+SELECT SCOPE_IDENTITY();
+
+-- View the donation history
+SELECT d.donation_id, u.username, d.total_amount, d.donated_at
+FROM DONATIONS d
+JOIN USERS u ON d.user_id = u.user_id;
+
+Select * FROM DONATIONS
+
+Select donation_id from donations where user_id = 1;
+
+USE Project;
+GO
+
+-- CREATNIG TABLE FOR DONATION SPLITTING
+CREATE TABLE DONATION_SPLITS (
+    split_id INT IDENTITY(1,1) PRIMARY KEY,
+    donation_id INT NOT NULL, -- Link to the main donation record
+    org_id INT NOT NULL,      -- Link to the receiving organization
+    amount DECIMAL(15,2) NOT NULL,
+    percentage DECIMAL(5,2),   -- e.g., 60.00 for 60%
+
+    -- Foreign Key Constraints
+    CONSTRAINT FK_Splits_Donation FOREIGN KEY (donation_id) 
+        REFERENCES DONATIONS(donation_id) ON DELETE CASCADE,
+        
+    CONSTRAINT FK_Splits_Org FOREIGN KEY (org_id) 
+        REFERENCES ORGANIZATIONS(org_id) ON DELETE NO ACTION
+);
+GO
+
+
+INSERT INTO DONATION_SPLITS (spit_id, donation_id, org_id, amount, percentage)
+VALUES 
+(1, 1, 7000.00, 70.00), -- 7000 to BRAC
+(1, 2, 3000.00, 30.00); -- 3000 to Bidyanondo
+
+SELECT * FROM DONATION_SPLITS
+
