@@ -43,13 +43,13 @@ namespace ZakatCalc
 
                 if (userRole == "admin")
                 {
-                    FormAdmin adminWindow = new FormAdmin(username, (FormLoginReg)this.FindForm());
+                    FormAdmin adminWindow = new FormAdmin(username, (FormLoginReg)this.FindForm(), userRole);
                     loginForm.Hide();
                     adminWindow.Show();
                 }
                 else if (userRole == "donor")
                 {
-                    FormDonor donorWindow = new FormDonor(username, (FormLoginReg)this.FindForm());
+                    FormDonor donorWindow = new FormDonor(username, (FormLoginReg)this.FindForm(), userRole);
                     loginForm.Hide();
                     donorWindow.Show();
                 }

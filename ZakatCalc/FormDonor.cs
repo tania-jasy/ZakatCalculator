@@ -14,16 +14,21 @@ namespace ZakatCalc
     {
         private FormLoginReg prevForm;
         private string name;
+        private string userRole;
         public FormDonor()
         {
             InitializeComponent();
         }
 
-        public FormDonor(string username, FormLoginReg Form1)
+        public FormDonor(string username, FormLoginReg Form1, string userRole)
         {
             InitializeComponent();
             this.prevForm = Form1;
             this.name = username;
+            this.userRole = userRole;
+
+
+            LoadControl(new ucCalculator(userRole));
         }
         public void LoadControl(UserControl control)
         {
@@ -49,7 +54,7 @@ namespace ZakatCalc
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            LoadControl(new ucCalculator());
+            LoadControl(new ucCalculator(userRole));
         }
 
         private void btnLog_Click_1(object sender, EventArgs e)

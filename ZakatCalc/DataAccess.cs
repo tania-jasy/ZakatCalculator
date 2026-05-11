@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -109,41 +109,6 @@ namespace FormStart
             Command = new SqlCommand(sql, connection);
             int rowsAffected = Command.ExecuteNonQuery();
             return rowsAffected;
-        }
-
-        public Tuple<string, string> GetUserDetails(string username)
-        {
-            string sql = "SELECT FullName, ID FROM UserInfo WHERE Username = @Username";
-            SqlDataReader reader = null;
-
-            try
-            {
-                Command = new SqlCommand(sql, connection);
-                Command.Parameters.AddWithValue("@Username", username);
-                reader = Command.ExecuteReader();
-
-                if (reader.Read())
-                {
-                    string fullName = reader["FullName"].ToString();
-                    string displayId = reader["ID"].ToString();
-
-                    return Tuple.Create(fullName, displayId);
-                }
-
-                return null;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error fetching user details: " + ex.Message);
-                return null;
-            }
-            finally
-            {
-                if (reader != null && !reader.IsClosed)
-                {
-                    reader.Close();
-                }
-            }
         }
     }
 }

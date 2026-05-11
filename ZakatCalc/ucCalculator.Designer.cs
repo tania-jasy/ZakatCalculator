@@ -28,302 +28,364 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblAssets = new System.Windows.Forms.Label();
-            this.lblLiabilities = new System.Windows.Forms.Label();
-            this.lblVar = new System.Windows.Forms.Label();
-            this.gbCalculate = new System.Windows.Forms.GroupBox();
-            this.lblReport = new System.Windows.Forms.Label();
-            this.lblZakatable = new System.Windows.Forms.Label();
-            this.lbalNisab = new System.Windows.Forms.Label();
-            this.lblDue = new System.Windows.Forms.Label();
-            this.txtCash = new System.Windows.Forms.TextBox();
-            this.txtBank = new System.Windows.Forms.TextBox();
-            this.txtGoldSilverValue = new System.Windows.Forms.TextBox();
-            this.txtStocks = new System.Windows.Forms.TextBox();
-            this.txtInventory = new System.Windows.Forms.TextBox();
-            this.txtInventories = new System.Windows.Forms.TextBox();
-            this.txtRental = new System.Windows.Forms.TextBox();
-            this.txtBillsDue = new System.Windows.Forms.TextBox();
-            this.txtLoans = new System.Windows.Forms.TextBox();
-            this.txtDebts = new System.Windows.Forms.TextBox();
-            this.rbSilver = new System.Windows.Forms.RadioButton();
-            this.rbGold = new System.Windows.Forms.RadioButton();
-            this.btnCalculate = new System.Windows.Forms.Button();
-            this.lblSelection = new System.Windows.Forms.Label();
-            this.txtSilverPerGram = new System.Windows.Forms.TextBox();
-            this.txtGoldPerGram = new System.Windows.Forms.TextBox();
-            this.btnDonate = new System.Windows.Forms.Button();
-            this.gbCalculate.SuspendLayout();
-            this.SuspendLayout();
+            lblAssets = new System.Windows.Forms.Label();
+            lblLiabilities = new System.Windows.Forms.Label();
+            lblVar = new System.Windows.Forms.Label();
+            gbCalculate = new System.Windows.Forms.GroupBox();
+            btnCalculate = new System.Windows.Forms.Button();
+            rbSilver = new System.Windows.Forms.RadioButton();
+            rbGold = new System.Windows.Forms.RadioButton();
+            lblSelection = new System.Windows.Forms.Label();
+            lblReport = new System.Windows.Forms.Label();
+            lblZakatable = new System.Windows.Forms.Label();
+            lblNisab = new System.Windows.Forms.Label();
+            lblDue = new System.Windows.Forms.Label();
+            txtCash = new System.Windows.Forms.TextBox();
+            txtBank = new System.Windows.Forms.TextBox();
+            txtGoldSilverValue = new System.Windows.Forms.TextBox();
+            txtStocks = new System.Windows.Forms.TextBox();
+            txtInventory = new System.Windows.Forms.TextBox();
+            txtRecievables = new System.Windows.Forms.TextBox();
+            txtRental = new System.Windows.Forms.TextBox();
+            txtBillsDue = new System.Windows.Forms.TextBox();
+            txtLoans = new System.Windows.Forms.TextBox();
+            txtDebts = new System.Windows.Forms.TextBox();
+            txtSilverPerGram = new System.Windows.Forms.TextBox();
+            txtGoldPerGram = new System.Windows.Forms.TextBox();
+            btnDonate = new System.Windows.Forms.Button();
+            btnSet = new System.Windows.Forms.Button();
+            lblGold = new System.Windows.Forms.Label();
+            lblSilver = new System.Windows.Forms.Label();
+            gbCalculate.SuspendLayout();
+            SuspendLayout();
             // 
             // lblAssets
             // 
-            this.lblAssets.AutoSize = true;
-            this.lblAssets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAssets.Location = new System.Drawing.Point(23, 23);
-            this.lblAssets.Name = "lblAssets";
-            this.lblAssets.Size = new System.Drawing.Size(83, 25);
-            this.lblAssets.TabIndex = 0;
-            this.lblAssets.Text = "Assets";
+            lblAssets.AutoSize = true;
+            lblAssets.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            lblAssets.Location = new System.Drawing.Point(27, 27);
+            lblAssets.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblAssets.Name = "lblAssets";
+            lblAssets.Size = new System.Drawing.Size(83, 25);
+            lblAssets.TabIndex = 0;
+            lblAssets.Text = "Assets";
             // 
             // lblLiabilities
             // 
-            this.lblLiabilities.AutoSize = true;
-            this.lblLiabilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLiabilities.Location = new System.Drawing.Point(23, 288);
-            this.lblLiabilities.Name = "lblLiabilities";
-            this.lblLiabilities.Size = new System.Drawing.Size(107, 25);
-            this.lblLiabilities.TabIndex = 1;
-            this.lblLiabilities.Text = "Liablities";
+            lblLiabilities.AutoSize = true;
+            lblLiabilities.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            lblLiabilities.Location = new System.Drawing.Point(27, 332);
+            lblLiabilities.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblLiabilities.Name = "lblLiabilities";
+            lblLiabilities.Size = new System.Drawing.Size(107, 25);
+            lblLiabilities.TabIndex = 1;
+            lblLiabilities.Text = "Liablities";
             // 
             // lblVar
             // 
-            this.lblVar.AutoSize = true;
-            this.lblVar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblVar.Location = new System.Drawing.Point(362, 23);
-            this.lblVar.Name = "lblVar";
-            this.lblVar.Size = new System.Drawing.Size(151, 25);
-            this.lblVar.TabIndex = 2;
-            this.lblVar.Text = "Current Price";
+            lblVar.AutoSize = true;
+            lblVar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            lblVar.Location = new System.Drawing.Point(422, 27);
+            lblVar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblVar.Name = "lblVar";
+            lblVar.Size = new System.Drawing.Size(151, 25);
+            lblVar.TabIndex = 2;
+            lblVar.Text = "Current Price";
             // 
             // gbCalculate
             // 
-            this.gbCalculate.Controls.Add(this.btnCalculate);
-            this.gbCalculate.Controls.Add(this.rbSilver);
-            this.gbCalculate.Controls.Add(this.rbGold);
-            this.gbCalculate.Controls.Add(this.lblSelection);
-            this.gbCalculate.Location = new System.Drawing.Point(367, 147);
-            this.gbCalculate.Name = "gbCalculate";
-            this.gbCalculate.Size = new System.Drawing.Size(272, 98);
-            this.gbCalculate.TabIndex = 3;
-            this.gbCalculate.TabStop = false;
-            this.gbCalculate.Enter += new System.EventHandler(this.gbCalculate_Enter);
-            // 
-            // lblReport
-            // 
-            this.lblReport.AutoSize = true;
-            this.lblReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblReport.Location = new System.Drawing.Point(362, 288);
-            this.lblReport.Name = "lblReport";
-            this.lblReport.Size = new System.Drawing.Size(82, 25);
-            this.lblReport.TabIndex = 4;
-            this.lblReport.Text = "Report";
-            // 
-            // lblZakatable
-            // 
-            this.lblZakatable.AutoSize = true;
-            this.lblZakatable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblZakatable.Location = new System.Drawing.Point(364, 333);
-            this.lblZakatable.Name = "lblZakatable";
-            this.lblZakatable.Size = new System.Drawing.Size(160, 18);
-            this.lblZakatable.TabIndex = 5;
-            this.lblZakatable.Text = "Zakatable Amount - 0.0";
-            // 
-            // lbalNisab
-            // 
-            this.lbalNisab.AutoSize = true;
-            this.lbalNisab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbalNisab.Location = new System.Drawing.Point(364, 363);
-            this.lbalNisab.Name = "lbalNisab";
-            this.lbalNisab.Size = new System.Drawing.Size(127, 18);
-            this.lbalNisab.TabIndex = 6;
-            this.lbalNisab.Text = "Nisab at time - 0.0";
-            // 
-            // lblDue
-            // 
-            this.lblDue.AutoSize = true;
-            this.lblDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDue.Location = new System.Drawing.Point(364, 394);
-            this.lblDue.Name = "lblDue";
-            this.lblDue.Size = new System.Drawing.Size(109, 18);
-            this.lblDue.TabIndex = 7;
-            this.lblDue.Text = "Zakat Due - 0.0";
-            // 
-            // txtCash
-            // 
-            this.txtCash.Location = new System.Drawing.Point(28, 69);
-            this.txtCash.Name = "txtCash";
-            this.txtCash.Size = new System.Drawing.Size(175, 20);
-            this.txtCash.TabIndex = 8;
-            this.txtCash.Text = "Cash Savings";
-            // 
-            // txtBank
-            // 
-            this.txtBank.Location = new System.Drawing.Point(28, 95);
-            this.txtBank.Name = "txtBank";
-            this.txtBank.Size = new System.Drawing.Size(175, 20);
-            this.txtBank.TabIndex = 9;
-            this.txtBank.Text = "Bank Balance";
-            // 
-            // txtGoldSilverValue
-            // 
-            this.txtGoldSilverValue.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtGoldSilverValue.Location = new System.Drawing.Point(28, 121);
-            this.txtGoldSilverValue.Name = "txtGoldSilverValue";
-            this.txtGoldSilverValue.Size = new System.Drawing.Size(175, 20);
-            this.txtGoldSilverValue.TabIndex = 10;
-            this.txtGoldSilverValue.Text = "Gold/Silver values";
-            // 
-            // txtStocks
-            // 
-            this.txtStocks.Location = new System.Drawing.Point(28, 147);
-            this.txtStocks.Name = "txtStocks";
-            this.txtStocks.Size = new System.Drawing.Size(175, 20);
-            this.txtStocks.TabIndex = 11;
-            this.txtStocks.Text = "Stocks Value";
-            // 
-            // txtInventory
-            // 
-            this.txtInventory.Location = new System.Drawing.Point(28, 173);
-            this.txtInventory.Name = "txtInventory";
-            this.txtInventory.Size = new System.Drawing.Size(175, 20);
-            this.txtInventory.TabIndex = 12;
-            this.txtInventory.Text = "Business Inventory";
-            // 
-            // txtInventories
-            // 
-            this.txtInventories.Location = new System.Drawing.Point(28, 199);
-            this.txtInventories.Name = "txtInventories";
-            this.txtInventories.Size = new System.Drawing.Size(175, 20);
-            this.txtInventories.TabIndex = 13;
-            this.txtInventories.Text = "Recievables";
-            this.txtInventories.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // txtRental
-            // 
-            this.txtRental.Location = new System.Drawing.Point(28, 225);
-            this.txtRental.Name = "txtRental";
-            this.txtRental.Size = new System.Drawing.Size(175, 20);
-            this.txtRental.TabIndex = 14;
-            this.txtRental.Text = "Rental Income";
-            // 
-            // txtBillsDue
-            // 
-            this.txtBillsDue.Location = new System.Drawing.Point(28, 386);
-            this.txtBillsDue.Name = "txtBillsDue";
-            this.txtBillsDue.Size = new System.Drawing.Size(175, 20);
-            this.txtBillsDue.TabIndex = 17;
-            this.txtBillsDue.Text = "Bills Due";
-            // 
-            // txtLoans
-            // 
-            this.txtLoans.Location = new System.Drawing.Point(28, 360);
-            this.txtLoans.Name = "txtLoans";
-            this.txtLoans.Size = new System.Drawing.Size(175, 20);
-            this.txtLoans.TabIndex = 16;
-            this.txtLoans.Text = "Loans Payable";
-            // 
-            // txtDebts
-            // 
-            this.txtDebts.Location = new System.Drawing.Point(28, 334);
-            this.txtDebts.Name = "txtDebts";
-            this.txtDebts.Size = new System.Drawing.Size(175, 20);
-            this.txtDebts.TabIndex = 15;
-            this.txtDebts.Text = "Debts";
-            // 
-            // rbSilver
-            // 
-            this.rbSilver.AutoSize = true;
-            this.rbSilver.Location = new System.Drawing.Point(83, 35);
-            this.rbSilver.Name = "rbSilver";
-            this.rbSilver.Size = new System.Drawing.Size(51, 17);
-            this.rbSilver.TabIndex = 20;
-            this.rbSilver.TabStop = true;
-            this.rbSilver.Text = "Silver";
-            this.rbSilver.UseVisualStyleBackColor = true;
-            // 
-            // rbGold
-            // 
-            this.rbGold.AutoSize = true;
-            this.rbGold.Location = new System.Drawing.Point(15, 35);
-            this.rbGold.Name = "rbGold";
-            this.rbGold.Size = new System.Drawing.Size(47, 17);
-            this.rbGold.TabIndex = 19;
-            this.rbGold.TabStop = true;
-            this.rbGold.Text = "Gold";
-            this.rbGold.UseVisualStyleBackColor = true;
+            gbCalculate.Controls.Add(btnCalculate);
+            gbCalculate.Controls.Add(rbSilver);
+            gbCalculate.Controls.Add(rbGold);
+            gbCalculate.Controls.Add(lblSelection);
+            gbCalculate.Location = new System.Drawing.Point(428, 170);
+            gbCalculate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbCalculate.Name = "gbCalculate";
+            gbCalculate.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            gbCalculate.Size = new System.Drawing.Size(317, 113);
+            gbCalculate.TabIndex = 3;
+            gbCalculate.TabStop = false;
+            gbCalculate.Enter += gbCalculate_Enter;
             // 
             // btnCalculate
             // 
-            this.btnCalculate.BackColor = System.Drawing.Color.DimGray;
-            this.btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculate.ForeColor = System.Drawing.Color.White;
-            this.btnCalculate.Location = new System.Drawing.Point(6, 54);
-            this.btnCalculate.Name = "btnCalculate";
-            this.btnCalculate.Size = new System.Drawing.Size(260, 38);
-            this.btnCalculate.TabIndex = 18;
-            this.btnCalculate.Text = "Calculate";
-            this.btnCalculate.UseVisualStyleBackColor = false;
+            btnCalculate.BackColor = System.Drawing.Color.DimGray;
+            btnCalculate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnCalculate.ForeColor = System.Drawing.Color.White;
+            btnCalculate.Location = new System.Drawing.Point(7, 62);
+            btnCalculate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnCalculate.Name = "btnCalculate";
+            btnCalculate.Size = new System.Drawing.Size(303, 44);
+            btnCalculate.TabIndex = 18;
+            btnCalculate.Text = "Calculate";
+            btnCalculate.UseVisualStyleBackColor = false;
+            btnCalculate.Click += btnCalculate_Click;
+            // 
+            // rbSilver
+            // 
+            rbSilver.AutoSize = true;
+            rbSilver.Location = new System.Drawing.Point(97, 40);
+            rbSilver.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbSilver.Name = "rbSilver";
+            rbSilver.Size = new System.Drawing.Size(53, 19);
+            rbSilver.TabIndex = 20;
+            rbSilver.TabStop = true;
+            rbSilver.Text = "Silver";
+            rbSilver.UseVisualStyleBackColor = true;
+            // 
+            // rbGold
+            // 
+            rbGold.AutoSize = true;
+            rbGold.Location = new System.Drawing.Point(18, 40);
+            rbGold.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            rbGold.Name = "rbGold";
+            rbGold.Size = new System.Drawing.Size(50, 19);
+            rbGold.TabIndex = 19;
+            rbGold.TabStop = true;
+            rbGold.Text = "Gold";
+            rbGold.UseVisualStyleBackColor = true;
             // 
             // lblSelection
             // 
-            this.lblSelection.AutoSize = true;
-            this.lblSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSelection.Location = new System.Drawing.Point(6, 10);
-            this.lblSelection.Name = "lblSelection";
-            this.lblSelection.Size = new System.Drawing.Size(183, 16);
-            this.lblSelection.TabIndex = 21;
-            this.lblSelection.Text = "Select Nisab as per your wish";
+            lblSelection.AutoSize = true;
+            lblSelection.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            lblSelection.Location = new System.Drawing.Point(7, 12);
+            lblSelection.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblSelection.Name = "lblSelection";
+            lblSelection.Size = new System.Drawing.Size(183, 16);
+            lblSelection.TabIndex = 21;
+            lblSelection.Text = "Select Nisab as per your wish";
+            // 
+            // lblReport
+            // 
+            lblReport.AutoSize = true;
+            lblReport.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            lblReport.Location = new System.Drawing.Point(422, 332);
+            lblReport.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblReport.Name = "lblReport";
+            lblReport.Size = new System.Drawing.Size(82, 25);
+            lblReport.TabIndex = 4;
+            lblReport.Text = "Report";
+            // 
+            // lblZakatable
+            // 
+            lblZakatable.AutoSize = true;
+            lblZakatable.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            lblZakatable.Location = new System.Drawing.Point(425, 384);
+            lblZakatable.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblZakatable.Name = "lblZakatable";
+            lblZakatable.Size = new System.Drawing.Size(160, 18);
+            lblZakatable.TabIndex = 5;
+            lblZakatable.Text = "Zakatable Amount - 0.0";
+            // 
+            // lblNisab
+            // 
+            lblNisab.AutoSize = true;
+            lblNisab.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            lblNisab.Location = new System.Drawing.Point(425, 419);
+            lblNisab.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblNisab.Name = "lblNisab";
+            lblNisab.Size = new System.Drawing.Size(127, 18);
+            lblNisab.TabIndex = 6;
+            lblNisab.Text = "Nisab at time - 0.0";
+            // 
+            // lblDue
+            // 
+            lblDue.AutoSize = true;
+            lblDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            lblDue.Location = new System.Drawing.Point(425, 455);
+            lblDue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            lblDue.Name = "lblDue";
+            lblDue.Size = new System.Drawing.Size(109, 18);
+            lblDue.TabIndex = 7;
+            lblDue.Text = "Zakat Due - 0.0";
+            // 
+            // txtCash
+            // 
+            txtCash.Location = new System.Drawing.Point(33, 80);
+            txtCash.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtCash.Name = "txtCash";
+            txtCash.PlaceholderText = "Cash Savings";
+            txtCash.Size = new System.Drawing.Size(204, 23);
+            txtCash.TabIndex = 8;
+            // 
+            // txtBank
+            // 
+            txtBank.Location = new System.Drawing.Point(33, 110);
+            txtBank.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtBank.Name = "txtBank";
+            txtBank.PlaceholderText = "Bank Balance";
+            txtBank.Size = new System.Drawing.Size(204, 23);
+            txtBank.TabIndex = 9;
+            // 
+            // txtGoldSilverValue
+            // 
+            txtGoldSilverValue.Cursor = System.Windows.Forms.Cursors.IBeam;
+            txtGoldSilverValue.Location = new System.Drawing.Point(33, 140);
+            txtGoldSilverValue.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtGoldSilverValue.Name = "txtGoldSilverValue";
+            txtGoldSilverValue.PlaceholderText = "Gold/Silver values";
+            txtGoldSilverValue.Size = new System.Drawing.Size(204, 23);
+            txtGoldSilverValue.TabIndex = 10;
+            // 
+            // txtStocks
+            // 
+            txtStocks.Location = new System.Drawing.Point(33, 170);
+            txtStocks.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtStocks.Name = "txtStocks";
+            txtStocks.PlaceholderText = "Stocks Value";
+            txtStocks.Size = new System.Drawing.Size(204, 23);
+            txtStocks.TabIndex = 11;
+            // 
+            // txtInventory
+            // 
+            txtInventory.Location = new System.Drawing.Point(33, 200);
+            txtInventory.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtInventory.Name = "txtInventory";
+            txtInventory.PlaceholderText = "Business Inventory";
+            txtInventory.Size = new System.Drawing.Size(204, 23);
+            txtInventory.TabIndex = 12;
+            // 
+            // txtRecievables
+            // 
+            txtRecievables.Location = new System.Drawing.Point(33, 230);
+            txtRecievables.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtRecievables.Name = "txtRecievables";
+            txtRecievables.PlaceholderText = "Recievables";
+            txtRecievables.Size = new System.Drawing.Size(204, 23);
+            txtRecievables.TabIndex = 13;
+            txtRecievables.TextChanged += textBox5_TextChanged;
+            // 
+            // txtRental
+            // 
+            txtRental.Location = new System.Drawing.Point(33, 260);
+            txtRental.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtRental.Name = "txtRental";
+            txtRental.PlaceholderText = "Rental Income";
+            txtRental.Size = new System.Drawing.Size(204, 23);
+            txtRental.TabIndex = 14;
+            // 
+            // txtBillsDue
+            // 
+            txtBillsDue.Location = new System.Drawing.Point(33, 445);
+            txtBillsDue.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtBillsDue.Name = "txtBillsDue";
+            txtBillsDue.PlaceholderText = "Bills Due";
+            txtBillsDue.Size = new System.Drawing.Size(204, 23);
+            txtBillsDue.TabIndex = 17;
+            // 
+            // txtLoans
+            // 
+            txtLoans.Location = new System.Drawing.Point(33, 415);
+            txtLoans.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtLoans.Name = "txtLoans";
+            txtLoans.PlaceholderText = "Loans Payable";
+            txtLoans.Size = new System.Drawing.Size(204, 23);
+            txtLoans.TabIndex = 16;
+            // 
+            // txtDebts
+            // 
+            txtDebts.Location = new System.Drawing.Point(33, 385);
+            txtDebts.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtDebts.Name = "txtDebts";
+            txtDebts.PlaceholderText = "Debts";
+            txtDebts.Size = new System.Drawing.Size(204, 23);
+            txtDebts.TabIndex = 15;
             // 
             // txtSilverPerGram
             // 
-            this.txtSilverPerGram.Location = new System.Drawing.Point(373, 95);
-            this.txtSilverPerGram.Name = "txtSilverPerGram";
-            this.txtSilverPerGram.Size = new System.Drawing.Size(175, 20);
-            this.txtSilverPerGram.TabIndex = 19;
-            this.txtSilverPerGram.Text = "Silver value per gram";
+            txtSilverPerGram.Location = new System.Drawing.Point(435, 107);
+            txtSilverPerGram.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtSilverPerGram.Name = "txtSilverPerGram";
+            txtSilverPerGram.Size = new System.Drawing.Size(204, 23);
+            txtSilverPerGram.TabIndex = 19;
             // 
             // txtGoldPerGram
             // 
-            this.txtGoldPerGram.Location = new System.Drawing.Point(373, 69);
-            this.txtGoldPerGram.Name = "txtGoldPerGram";
-            this.txtGoldPerGram.Size = new System.Drawing.Size(175, 20);
-            this.txtGoldPerGram.TabIndex = 18;
-            this.txtGoldPerGram.Text = "Gold value per gram";
+            txtGoldPerGram.Location = new System.Drawing.Point(435, 77);
+            txtGoldPerGram.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            txtGoldPerGram.Name = "txtGoldPerGram";
+            txtGoldPerGram.Size = new System.Drawing.Size(204, 23);
+            txtGoldPerGram.TabIndex = 18;
             // 
             // btnDonate
             // 
-            this.btnDonate.BackColor = System.Drawing.Color.DimGray;
-            this.btnDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDonate.ForeColor = System.Drawing.Color.White;
-            this.btnDonate.Location = new System.Drawing.Point(28, 454);
-            this.btnDonate.Name = "btnDonate";
-            this.btnDonate.Size = new System.Drawing.Size(605, 53);
-            this.btnDonate.TabIndex = 22;
-            this.btnDonate.Text = "Donate";
-            this.btnDonate.UseVisualStyleBackColor = false;
+            btnDonate.BackColor = System.Drawing.Color.DimGray;
+            btnDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnDonate.ForeColor = System.Drawing.Color.White;
+            btnDonate.Location = new System.Drawing.Point(33, 524);
+            btnDonate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDonate.Name = "btnDonate";
+            btnDonate.Size = new System.Drawing.Size(706, 61);
+            btnDonate.TabIndex = 22;
+            btnDonate.Text = "Donate";
+            btnDonate.UseVisualStyleBackColor = false;
+            // 
+            // btnSet
+            // 
+            btnSet.Location = new System.Drawing.Point(435, 136);
+            btnSet.Name = "btnSet";
+            btnSet.Size = new System.Drawing.Size(75, 23);
+            btnSet.TabIndex = 23;
+            btnSet.Text = "Set";
+            btnSet.UseVisualStyleBackColor = true;
+            btnSet.Click += btnSet_Click;
+            // 
+            // lblGold
+            // 
+            lblGold.AutoSize = true;
+            lblGold.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            lblGold.Location = new System.Drawing.Point(646, 80);
+            lblGold.Name = "lblGold";
+            lblGold.Size = new System.Drawing.Size(113, 15);
+            lblGold.TabIndex = 24;
+            lblGold.Text = "Gold Price per Gram";
+            // 
+            // lblSilver
+            // 
+            lblSilver.AutoSize = true;
+            lblSilver.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            lblSilver.Location = new System.Drawing.Point(648, 110);
+            lblSilver.Name = "lblSilver";
+            lblSilver.Size = new System.Drawing.Size(116, 15);
+            lblSilver.TabIndex = 25;
+            lblSilver.Text = "Silver Price per Gram";
             // 
             // ucCalculator
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnDonate);
-            this.Controls.Add(this.txtSilverPerGram);
-            this.Controls.Add(this.txtGoldPerGram);
-            this.Controls.Add(this.txtBillsDue);
-            this.Controls.Add(this.txtLoans);
-            this.Controls.Add(this.txtDebts);
-            this.Controls.Add(this.txtRental);
-            this.Controls.Add(this.txtInventories);
-            this.Controls.Add(this.txtInventory);
-            this.Controls.Add(this.txtStocks);
-            this.Controls.Add(this.txtGoldSilverValue);
-            this.Controls.Add(this.txtBank);
-            this.Controls.Add(this.txtCash);
-            this.Controls.Add(this.lblDue);
-            this.Controls.Add(this.lbalNisab);
-            this.Controls.Add(this.lblZakatable);
-            this.Controls.Add(this.lblReport);
-            this.Controls.Add(this.gbCalculate);
-            this.Controls.Add(this.lblVar);
-            this.Controls.Add(this.lblLiabilities);
-            this.Controls.Add(this.lblAssets);
-            this.Name = "ucCalculator";
-            this.Size = new System.Drawing.Size(677, 537);
-            this.gbCalculate.ResumeLayout(false);
-            this.gbCalculate.PerformLayout();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            Controls.Add(lblSilver);
+            Controls.Add(lblGold);
+            Controls.Add(btnSet);
+            Controls.Add(btnDonate);
+            Controls.Add(txtSilverPerGram);
+            Controls.Add(txtGoldPerGram);
+            Controls.Add(txtBillsDue);
+            Controls.Add(txtLoans);
+            Controls.Add(txtDebts);
+            Controls.Add(txtRental);
+            Controls.Add(txtRecievables);
+            Controls.Add(txtInventory);
+            Controls.Add(txtStocks);
+            Controls.Add(txtGoldSilverValue);
+            Controls.Add(txtBank);
+            Controls.Add(txtCash);
+            Controls.Add(lblDue);
+            Controls.Add(lblNisab);
+            Controls.Add(lblZakatable);
+            Controls.Add(lblReport);
+            Controls.Add(gbCalculate);
+            Controls.Add(lblVar);
+            Controls.Add(lblLiabilities);
+            Controls.Add(lblAssets);
+            Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            Name = "ucCalculator";
+            Size = new System.Drawing.Size(790, 620);
+            gbCalculate.ResumeLayout(false);
+            gbCalculate.PerformLayout();
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 
@@ -335,14 +397,14 @@
         private System.Windows.Forms.GroupBox gbCalculate;
         private System.Windows.Forms.Label lblReport;
         private System.Windows.Forms.Label lblZakatable;
-        private System.Windows.Forms.Label lbalNisab;
+        private System.Windows.Forms.Label lblNisab;
         private System.Windows.Forms.Label lblDue;
         private System.Windows.Forms.TextBox txtCash;
         private System.Windows.Forms.TextBox txtBank;
         private System.Windows.Forms.TextBox txtGoldSilverValue;
         private System.Windows.Forms.TextBox txtStocks;
         private System.Windows.Forms.TextBox txtInventory;
-        private System.Windows.Forms.TextBox txtInventories;
+        private System.Windows.Forms.TextBox txtRecievables;
         private System.Windows.Forms.TextBox txtRental;
         private System.Windows.Forms.TextBox txtBillsDue;
         private System.Windows.Forms.TextBox txtLoans;
@@ -354,5 +416,8 @@
         private System.Windows.Forms.TextBox txtSilverPerGram;
         private System.Windows.Forms.TextBox txtGoldPerGram;
         private System.Windows.Forms.Button btnDonate;
+        private System.Windows.Forms.Button btnSet;
+        private System.Windows.Forms.Label lblGold;
+        private System.Windows.Forms.Label lblSilver;
     }
 }
