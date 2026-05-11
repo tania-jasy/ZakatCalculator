@@ -35,7 +35,12 @@ namespace ZakatCalc
             }
             // Pulling from DataAccess Class Metho
             string userRole = Da.LoginOnUserRole(username, password);
+            
+            string sqlQuery = $"SELECT user_id FROM Users WHERE username = '{username}' AND password = '{password}'";
 
+            DataTable dt = Da.ExecuteQueryTable(sqlQuery);
+
+            int userID = Convert.ToInt32(dt.Rows[0]["user_id"]);
             if (userRole != null)
             {
                 //holding the parent form here, in a variable
@@ -43,13 +48,13 @@ namespace ZakatCalc
 
                 if (userRole == "admin")
                 {
-                    FormAdmin adminWindow = new FormAdmin(username, (FormLoginReg)this.FindForm(), userRole);
+                    FormAdmin adminWindow = new FormAdmin(username, (FormLoginReg)this.FindForm(), userRole, userID);
                     loginForm.Hide();
                     adminWindow.Show();
                 }
                 else if (userRole == "donor")
                 {
-                    FormDonor donorWindow = new FormDonor(username, (FormLoginReg)this.FindForm(), userRole);
+                    FormDonor donorWindow = new FormDonor(username, (FormLoginReg)this.FindForm(), userRole, userID);
                     loginForm.Hide();
                     donorWindow.Show();
                 }

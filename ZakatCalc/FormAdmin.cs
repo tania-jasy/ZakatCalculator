@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,20 +18,22 @@ namespace ZakatCalc
         private FormLoginReg prevForm;
         private string name;
         private string userRole;
+        private int userID;
         public FormAdmin()
         {
             InitializeComponent();
         }
 
-        public FormAdmin(string username, FormLoginReg Form1, string userRole)
+        public FormAdmin(string username, FormLoginReg Form1, string userRole, int userID)
         {
             InitializeComponent();
             this.prevForm = Form1;
             this.name = username;
             this.userRole = userRole;
+            this.userID = userID;
 
 
-            LoadControl(new ucCalculator(userRole));
+            LoadControl(new ucCalculator(userRole, userID));
         }
         public void LoadControl(UserControl control)
         {
@@ -44,7 +47,7 @@ namespace ZakatCalc
         }
         private void btnCalc_Click(object sender, EventArgs e)
         {
-            LoadControl(new ucCalculator(userRole));
+            LoadControl(new ucCalculator(userRole, userID));
         }
         private void btnUsers_Click(object sender, EventArgs e)
         {

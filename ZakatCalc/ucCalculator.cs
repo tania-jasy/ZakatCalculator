@@ -10,12 +10,14 @@ using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ZakatCalc
 {
     public partial class ucCalculator : UserControl
     {
         private string userRole;
+        private int userID;
 
         private decimal goldPrice = 0;
         private decimal silverPrice = 0;
@@ -26,14 +28,16 @@ namespace ZakatCalc
 
         private DataAccess Da { get; set; }
 
-        public ucCalculator(string userRole)
+        public ucCalculator(string userRole, int userID )
         {
             InitializeComponent();
+
             this.userRole = userRole;
+            this.userID = userID;
+
             Da = new DataAccess();
 
             Permission();
-
             metalPrices();
 
         }
@@ -52,8 +56,8 @@ namespace ZakatCalc
         {
             string query = "SELECT * FROM METAL_PRICES WHERE Id = 1";
             DataTable dt = Da.ExecuteQueryTable(query); // brings the table 
-            txtGoldPerGram.Text = dt.Rows[0]    ["GoldPrice"].ToString();
-            txtSilverPerGram.Text = dt.Rows[0]    ["SilverPrice"].ToString();
+            txtGoldPerGram.Text = dt.Rows[0]["GoldPrice"].ToString();
+            txtSilverPerGram.Text = dt.Rows[0]["SilverPrice"].ToString();
         }
         private void btnSet_Click(object sender, EventArgs e)
         {
@@ -72,9 +76,9 @@ namespace ZakatCalc
                 MessageBox.Show("Prices set successfully!");
             }
         }
-        private decimal ParseInput(string input)
+        public decimal ParseInput(string input)
         {
-            if (string.IsNullOrWhiteSpace(input)) 
+            if (string.IsNullOrWhiteSpace(input))
             {
                 return 0m;
             }
@@ -88,7 +92,7 @@ namespace ZakatCalc
                 return 0m; // Returns 0 even if the user typed text like "abc"
             }
         }
-        private void btnCalculate_Click(object sender, EventArgs e)
+        public void btnCalculate_Click(object sender, EventArgs e)
         {
             // ASSETS
             // Any empty field returns 0 via the ParseInput helper
@@ -168,11 +172,30 @@ namespace ZakatCalc
             }
 
             // 6. UPDATE THE UI
-            lblZakatable.Text = $"Zakatable Amount - {finalZakatableAmount:N2}";
-            lblNisab.Text = $"Nisab at time - {nisabThreshold:N2}";
-            lblDue.Text = $"Zakat Due - {zakatDue:N2}";
+            lblZakatable.Text = $"Zakatable Amount - {finalZakatableAmount}";
+            lblNisab.Text = $"Nisab at time - {nisabThreshold}";
+            lblDue.Text = $"Zakat Due - {zakatDue}";
         }
 
+        private void btnDonate_Click(object sender, EventArgs e)
+        {
+            // 1. Try to find the "Container" (the Main Window)
+            if (this.FindForm() is FormAdmin mainForm)
+            {
+                // 2. Create the new screen we want to show
+                var donationScreen = new ucDonations(zakatDue, userID, mainForm, null);
+
+                // 3. Tell the Main Window to display it
+                mainForm.LoadControl(donationScreen);
+                return;
+            }
+            else if (this.FindForm() is FormDonor mainForm2)    
+            {
+                var donationScreen = new ucDonations(zakatDue, userID, null ,mainForm2);
+                mainForm2.LoadControl(donationScreen);
+                return;
+            }
+        }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {

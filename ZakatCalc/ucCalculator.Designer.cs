@@ -52,10 +52,10 @@
             txtDebts = new System.Windows.Forms.TextBox();
             txtSilverPerGram = new System.Windows.Forms.TextBox();
             txtGoldPerGram = new System.Windows.Forms.TextBox();
-            btnDonate = new System.Windows.Forms.Button();
             btnSet = new System.Windows.Forms.Button();
             lblGold = new System.Windows.Forms.Label();
             lblSilver = new System.Windows.Forms.Label();
+            btnDonate = new System.Windows.Forms.Button();
             gbCalculate.SuspendLayout();
             SuspendLayout();
             // 
@@ -308,19 +308,6 @@
             txtGoldPerGram.Size = new System.Drawing.Size(204, 23);
             txtGoldPerGram.TabIndex = 18;
             // 
-            // btnDonate
-            // 
-            btnDonate.BackColor = System.Drawing.Color.DimGray;
-            btnDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnDonate.ForeColor = System.Drawing.Color.White;
-            btnDonate.Location = new System.Drawing.Point(33, 524);
-            btnDonate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            btnDonate.Name = "btnDonate";
-            btnDonate.Size = new System.Drawing.Size(706, 61);
-            btnDonate.TabIndex = 22;
-            btnDonate.Text = "Donate";
-            btnDonate.UseVisualStyleBackColor = false;
-            // 
             // btnSet
             // 
             btnSet.Location = new System.Drawing.Point(435, 136);
@@ -350,6 +337,20 @@
             lblSilver.Size = new System.Drawing.Size(116, 15);
             lblSilver.TabIndex = 25;
             lblSilver.Text = "Silver Price per Gram";
+            // 
+            // btnDonate
+            // 
+            btnDonate.BackColor = System.Drawing.Color.DimGray;
+            btnDonate.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnDonate.ForeColor = System.Drawing.Color.White;
+            btnDonate.Location = new System.Drawing.Point(33, 524);
+            btnDonate.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            btnDonate.Name = "btnDonate";
+            btnDonate.Size = new System.Drawing.Size(706, 61);
+            btnDonate.TabIndex = 22;
+            btnDonate.Text = "Donate";
+            btnDonate.UseVisualStyleBackColor = false;
+            btnDonate.Click += btnDonate_Click;
             // 
             // ucCalculator
             // 
@@ -415,9 +416,9 @@
         private System.Windows.Forms.Label lblSelection;
         private System.Windows.Forms.TextBox txtSilverPerGram;
         private System.Windows.Forms.TextBox txtGoldPerGram;
-        private System.Windows.Forms.Button btnDonate;
         private System.Windows.Forms.Button btnSet;
         private System.Windows.Forms.Label lblGold;
         private System.Windows.Forms.Label lblSilver;
+        private System.Windows.Forms.Button btnDonate;
     }
 }

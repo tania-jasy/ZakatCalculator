@@ -28,243 +28,243 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlHolder = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlLoader = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pnlButtonsContainer = new System.Windows.Forms.Panel();
-            this.btnLog = new System.Windows.Forms.Button();
-            this.btnHistory = new System.Windows.Forms.Button();
-            this.btnProfile = new System.Windows.Forms.Button();
-            this.btnCalc = new System.Windows.Forms.Button();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.btnLogout = new System.Windows.Forms.Button();
-            this.pnlHolder.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.pnlButtonsContainer.SuspendLayout();
-            this.SuspendLayout();
+            pnlHolder = new System.Windows.Forms.Panel();
+            panel1 = new System.Windows.Forms.Panel();
+            pnlLoader = new System.Windows.Forms.Panel();
+            panel2 = new System.Windows.Forms.Panel();
+            button1 = new System.Windows.Forms.Button();
+            button2 = new System.Windows.Forms.Button();
+            button3 = new System.Windows.Forms.Button();
+            button4 = new System.Windows.Forms.Button();
+            button5 = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            pnlButtonsContainer = new System.Windows.Forms.Panel();
+            btnLog = new System.Windows.Forms.Button();
+            btnHistory = new System.Windows.Forms.Button();
+            btnProfile = new System.Windows.Forms.Button();
+            btnCalc = new System.Windows.Forms.Button();
+            lblWelcome = new System.Windows.Forms.Label();
+            btnLogout = new System.Windows.Forms.Button();
+            pnlHolder.SuspendLayout();
+            panel1.SuspendLayout();
+            panel2.SuspendLayout();
+            pnlButtonsContainer.SuspendLayout();
+            SuspendLayout();
             // 
             // pnlHolder
             // 
-            this.pnlHolder.Controls.Add(this.panel1);
-            this.pnlHolder.Controls.Add(this.panel2);
-            this.pnlHolder.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pnlHolder.Location = new System.Drawing.Point(211, 0);
-            this.pnlHolder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlHolder.Name = "pnlHolder";
-            this.pnlHolder.Size = new System.Drawing.Size(677, 537);
-            this.pnlHolder.TabIndex = 4;
+            pnlHolder.Controls.Add(panel1);
+            pnlHolder.Controls.Add(panel2);
+            pnlHolder.Dock = System.Windows.Forms.DockStyle.Right;
+            pnlHolder.Location = new System.Drawing.Point(246, 0);
+            pnlHolder.Margin = new System.Windows.Forms.Padding(2);
+            pnlHolder.Name = "pnlHolder";
+            pnlHolder.Size = new System.Drawing.Size(790, 620);
+            pnlHolder.TabIndex = 4;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.pnlLoader);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(677, 537);
-            this.panel1.TabIndex = 4;
+            panel1.Controls.Add(pnlLoader);
+            panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            panel1.Location = new System.Drawing.Point(0, 0);
+            panel1.Margin = new System.Windows.Forms.Padding(2);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(790, 620);
+            panel1.TabIndex = 4;
             // 
             // pnlLoader
             // 
-            this.pnlLoader.Location = new System.Drawing.Point(2, 2);
-            this.pnlLoader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlLoader.Name = "pnlLoader";
-            this.pnlLoader.Size = new System.Drawing.Size(677, 537);
-            this.pnlLoader.TabIndex = 0;
+            pnlLoader.Location = new System.Drawing.Point(2, 2);
+            pnlLoader.Margin = new System.Windows.Forms.Padding(2);
+            pnlLoader.Name = "pnlLoader";
+            pnlLoader.Size = new System.Drawing.Size(790, 620);
+            pnlLoader.TabIndex = 0;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(540, 537);
-            this.panel2.TabIndex = 3;
+            panel2.Controls.Add(button1);
+            panel2.Controls.Add(button2);
+            panel2.Controls.Add(button3);
+            panel2.Controls.Add(button4);
+            panel2.Controls.Add(button5);
+            panel2.Controls.Add(label1);
+            panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            panel2.Location = new System.Drawing.Point(0, 0);
+            panel2.Margin = new System.Windows.Forms.Padding(2);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(630, 620);
+            panel2.TabIndex = 3;
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(73, 498);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(55, 29);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "LogOut";
-            this.button1.UseVisualStyleBackColor = true;
+            button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            button1.Location = new System.Drawing.Point(85, 575);
+            button1.Margin = new System.Windows.Forms.Padding(2);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(64, 33);
+            button1.TabIndex = 5;
+            button1.Text = "LogOut";
+            button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(68, 552);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(82, 25);
-            this.button2.TabIndex = 4;
-            this.button2.Text = "Log out";
-            this.button2.UseVisualStyleBackColor = true;
+            button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            button2.Location = new System.Drawing.Point(79, 637);
+            button2.Margin = new System.Windows.Forms.Padding(2);
+            button2.Name = "button2";
+            button2.Size = new System.Drawing.Size(96, 29);
+            button2.TabIndex = 4;
+            button2.Text = "Log out";
+            button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(9, 395);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(188, 39);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "History";
-            this.button3.UseVisualStyleBackColor = true;
+            button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            button3.Location = new System.Drawing.Point(10, 456);
+            button3.Margin = new System.Windows.Forms.Padding(2);
+            button3.Name = "button3";
+            button3.Size = new System.Drawing.Size(219, 45);
+            button3.TabIndex = 3;
+            button3.Text = "History";
+            button3.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(9, 339);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(188, 39);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Profile";
-            this.button4.UseVisualStyleBackColor = true;
+            button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            button4.Location = new System.Drawing.Point(10, 391);
+            button4.Margin = new System.Windows.Forms.Padding(2);
+            button4.Name = "button4";
+            button4.Size = new System.Drawing.Size(219, 45);
+            button4.TabIndex = 2;
+            button4.Text = "Profile";
+            button4.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(9, 285);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(188, 39);
-            this.button5.TabIndex = 1;
-            this.button5.Text = "Calculator";
-            this.button5.UseVisualStyleBackColor = true;
+            button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            button5.Location = new System.Drawing.Point(10, 329);
+            button5.Margin = new System.Windows.Forms.Padding(2);
+            button5.Name = "button5";
+            button5.Size = new System.Drawing.Size(219, 45);
+            button5.TabIndex = 1;
+            button5.Text = "Calculator";
+            button5.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(60, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(122, 29);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Welcome";
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            label1.Location = new System.Drawing.Point(70, 37);
+            label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(122, 29);
+            label1.TabIndex = 0;
+            label1.Text = "Welcome";
             // 
             // pnlButtonsContainer
             // 
-            this.pnlButtonsContainer.Controls.Add(this.btnLog);
-            this.pnlButtonsContainer.Controls.Add(this.btnHistory);
-            this.pnlButtonsContainer.Controls.Add(this.btnProfile);
-            this.pnlButtonsContainer.Controls.Add(this.btnCalc);
-            this.pnlButtonsContainer.Controls.Add(this.lblWelcome);
-            this.pnlButtonsContainer.Controls.Add(this.btnLogout);
-            this.pnlButtonsContainer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pnlButtonsContainer.Location = new System.Drawing.Point(0, 0);
-            this.pnlButtonsContainer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pnlButtonsContainer.Name = "pnlButtonsContainer";
-            this.pnlButtonsContainer.Size = new System.Drawing.Size(210, 537);
-            this.pnlButtonsContainer.TabIndex = 3;
+            pnlButtonsContainer.Controls.Add(btnLog);
+            pnlButtonsContainer.Controls.Add(btnHistory);
+            pnlButtonsContainer.Controls.Add(btnProfile);
+            pnlButtonsContainer.Controls.Add(btnCalc);
+            pnlButtonsContainer.Controls.Add(lblWelcome);
+            pnlButtonsContainer.Controls.Add(btnLogout);
+            pnlButtonsContainer.Dock = System.Windows.Forms.DockStyle.Left;
+            pnlButtonsContainer.Location = new System.Drawing.Point(0, 0);
+            pnlButtonsContainer.Margin = new System.Windows.Forms.Padding(2);
+            pnlButtonsContainer.Name = "pnlButtonsContainer";
+            pnlButtonsContainer.Size = new System.Drawing.Size(245, 620);
+            pnlButtonsContainer.TabIndex = 3;
             // 
             // btnLog
             // 
-            this.btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLog.Location = new System.Drawing.Point(66, 487);
-            this.btnLog.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLog.Name = "btnLog";
-            this.btnLog.Size = new System.Drawing.Size(88, 29);
-            this.btnLog.TabIndex = 10;
-            this.btnLog.Text = "<- Log out";
-            this.btnLog.UseVisualStyleBackColor = true;
-            this.btnLog.Click += new System.EventHandler(this.btnLog_Click_1);
+            btnLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnLog.Location = new System.Drawing.Point(77, 562);
+            btnLog.Margin = new System.Windows.Forms.Padding(2);
+            btnLog.Name = "btnLog";
+            btnLog.Size = new System.Drawing.Size(103, 33);
+            btnLog.TabIndex = 10;
+            btnLog.Text = "<- Log out";
+            btnLog.UseVisualStyleBackColor = true;
+            btnLog.Click += btnLog_Click_1;
             // 
             // btnHistory
             // 
-            this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistory.Location = new System.Drawing.Point(11, 384);
-            this.btnHistory.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnHistory.Name = "btnHistory";
-            this.btnHistory.Size = new System.Drawing.Size(188, 39);
-            this.btnHistory.TabIndex = 9;
-            this.btnHistory.Text = "History";
-            this.btnHistory.UseVisualStyleBackColor = true;
+            btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnHistory.Location = new System.Drawing.Point(13, 443);
+            btnHistory.Margin = new System.Windows.Forms.Padding(2);
+            btnHistory.Name = "btnHistory";
+            btnHistory.Size = new System.Drawing.Size(219, 45);
+            btnHistory.TabIndex = 9;
+            btnHistory.Text = "History";
+            btnHistory.UseVisualStyleBackColor = true;
             // 
             // btnProfile
             // 
-            this.btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProfile.Location = new System.Drawing.Point(11, 327);
-            this.btnProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnProfile.Name = "btnProfile";
-            this.btnProfile.Size = new System.Drawing.Size(188, 39);
-            this.btnProfile.TabIndex = 8;
-            this.btnProfile.Text = "Profile";
-            this.btnProfile.UseVisualStyleBackColor = true;
-            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
+            btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnProfile.Location = new System.Drawing.Point(13, 377);
+            btnProfile.Margin = new System.Windows.Forms.Padding(2);
+            btnProfile.Name = "btnProfile";
+            btnProfile.Size = new System.Drawing.Size(219, 45);
+            btnProfile.TabIndex = 8;
+            btnProfile.Text = "Profile";
+            btnProfile.UseVisualStyleBackColor = true;
+            btnProfile.Click += btnProfile_Click;
             // 
             // btnCalc
             // 
-            this.btnCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalc.Location = new System.Drawing.Point(11, 274);
-            this.btnCalc.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnCalc.Name = "btnCalc";
-            this.btnCalc.Size = new System.Drawing.Size(188, 39);
-            this.btnCalc.TabIndex = 7;
-            this.btnCalc.Text = "Calculator";
-            this.btnCalc.UseVisualStyleBackColor = true;
-            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
+            btnCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnCalc.Location = new System.Drawing.Point(13, 316);
+            btnCalc.Margin = new System.Windows.Forms.Padding(2);
+            btnCalc.Name = "btnCalc";
+            btnCalc.Size = new System.Drawing.Size(219, 45);
+            btnCalc.TabIndex = 7;
+            btnCalc.Text = "Calculator";
+            btnCalc.UseVisualStyleBackColor = true;
+            btnCalc.Click += btnCalc_Click;
             // 
             // lblWelcome
             // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.Location = new System.Drawing.Point(62, 20);
-            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(122, 29);
-            this.lblWelcome.TabIndex = 6;
-            this.lblWelcome.Text = "Welcome";
+            lblWelcome.AutoSize = true;
+            lblWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            lblWelcome.Location = new System.Drawing.Point(60, 27);
+            lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            lblWelcome.Name = "lblWelcome";
+            lblWelcome.Size = new System.Drawing.Size(122, 29);
+            lblWelcome.TabIndex = 6;
+            lblWelcome.Text = "Welcome";
             // 
             // btnLogout
             // 
-            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(68, 552);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(82, 25);
-            this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "Log out";
-            this.btnLogout.UseVisualStyleBackColor = true;
+            btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
+            btnLogout.Location = new System.Drawing.Point(79, 637);
+            btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new System.Drawing.Size(96, 29);
+            btnLogout.TabIndex = 4;
+            btnLogout.Text = "Log out";
+            btnLogout.UseVisualStyleBackColor = true;
             // 
             // FormDonor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(888, 537);
-            this.Controls.Add(this.pnlHolder);
-            this.Controls.Add(this.pnlButtonsContainer);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "FormDonor";
-            this.Text = "Donor Dashboard";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDonor_FormClosing);
-            this.Load += new System.EventHandler(this.FormDonor_Load);
-            this.pnlHolder.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.pnlButtonsContainer.ResumeLayout(false);
-            this.pnlButtonsContainer.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.SystemColors.ActiveCaption;
+            ClientSize = new System.Drawing.Size(1036, 620);
+            Controls.Add(pnlHolder);
+            Controls.Add(pnlButtonsContainer);
+            Margin = new System.Windows.Forms.Padding(2);
+            Name = "FormDonor";
+            Text = "Donor Dashboard";
+            FormClosing += FormDonor_FormClosing;
+            Load += FormDonor_Load;
+            pnlHolder.ResumeLayout(false);
+            panel1.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            pnlButtonsContainer.ResumeLayout(false);
+            pnlButtonsContainer.PerformLayout();
+            ResumeLayout(false);
 
         }
 
