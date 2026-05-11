@@ -28,18 +28,23 @@ namespace ZakatCalc
 
         private DataAccess Da { get; set; }
 
-        public ucCalculator(string userRole, int userID )
+        public ucCalculator(string userRole, int userID)
         {
             InitializeComponent();
+            try
+            {
+                this.userRole = userRole;
+                this.userID = userID;
 
-            this.userRole = userRole;
-            this.userID = userID;
+                Da = new DataAccess();
 
-            Da = new DataAccess();
-
-            Permission();
-            metalPrices();
-
+                Permission();
+                metalPrices();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void Permission()
@@ -54,11 +59,22 @@ namespace ZakatCalc
 
         private void metalPrices()
         {
-            string query = "SELECT * FROM METAL_PRICES WHERE Id = 1";
-            DataTable dt = Da.ExecuteQueryTable(query); // brings the table 
-            txtGoldPerGram.Text = dt.Rows[0]["GoldPrice"].ToString();
-            txtSilverPerGram.Text = dt.Rows[0]["SilverPrice"].ToString();
+            try
+            {
+                string query = "SELECT * FROM METAL_PRICES WHERE Id = 1";
+                DataTable dt = Da.ExecuteQueryTable(query);
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    txtGoldPerGram.Text = dt.Rows[0]["GoldPrice"].ToString();
+                    txtSilverPerGram.Text = dt.Rows[0]["SilverPrice"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
         private void btnSet_Click(object sender, EventArgs e)
         {
             if ((string.IsNullOrWhiteSpace(txtGoldPerGram.Text) || string.IsNullOrWhiteSpace(txtSilverPerGram.Text)))
@@ -67,15 +83,23 @@ namespace ZakatCalc
                 return;
             }
 
-            string query = "UPDATE METAL_PRICES SET GoldPrice = " + txtGoldPerGram.Text + ", SilverPrice = " + txtSilverPerGram.Text + ", LastUpdated = GETDATE() WHERE Id = 1;";
-            int dt = Da.ExecuteQuery(query);
-
-            if (dt == 1)
+            try
             {
-                metalPrices();
-                MessageBox.Show("Prices set successfully!");
+                string query = "UPDATE METAL_PRICES SET GoldPrice = " + txtGoldPerGram.Text + ", SilverPrice = " + txtSilverPerGram.Text + ", LastUpdated = GETDATE() WHERE Id = 1;";
+                int dt = Da.ExecuteQuery(query);
+
+                if (dt == 1)
+                {
+                    metalPrices();
+                    MessageBox.Show("Prices set successfully!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
+
         public decimal ParseInput(string input)
         {
             if (string.IsNullOrWhiteSpace(input))
@@ -89,124 +113,110 @@ namespace ZakatCalc
             }
             else
             {
-                return 0m; // Returns 0 even if the user typed text like "abc"
+                return 0m;
             }
         }
+
         public void btnCalculate_Click(object sender, EventArgs e)
         {
-            // ASSETS
-            // Any empty field returns 0 via the ParseInput helper
-            decimal cashSavings = ParseInput(txtCash.Text);
-            decimal bankBalance = ParseInput(txtBank.Text);
-            decimal goldSilverValue = ParseInput(txtGoldSilverValue.Text);
-            decimal stocksValue = ParseInput(txtStocks.Text);
-            decimal businessInventory = ParseInput(txtInventory.Text);
-            decimal receivables = ParseInput(txtRecievables.Text);
-            decimal rentalIncome = ParseInput(txtRental.Text);
-
-            // LIABILITIES
-            decimal debts = ParseInput(txtDebts.Text);
-            decimal loansPayable = ParseInput(txtLoans.Text);
-            decimal billsDue = ParseInput(txtBillsDue.Text);
-
-            // Selecting nisab as per my wish
-            if (!rbGold.Checked && !rbSilver.Checked)
+            try
             {
-                MessageBox.Show("Please select a Nisab standard (Gold or Silver).", "Input Required");
-                return;
-            }
+                // ASSETS
+                decimal cashSavings = ParseInput(txtCash.Text);
+                decimal bankBalance = ParseInput(txtBank.Text);
+                decimal goldSilverValue = ParseInput(txtGoldSilverValue.Text);
+                decimal stocksValue = ParseInput(txtStocks.Text);
+                decimal businessInventory = ParseInput(txtInventory.Text);
+                decimal receivables = ParseInput(txtRecievables.Text);
+                decimal rentalIncome = ParseInput(txtRental.Text);
 
-            // Check if the relevant metal price was entered
-            if (rbGold.Checked && ParseInput(txtGoldPerGram.Text) <= 0)
+                // LIABILITIES
+                decimal debts = ParseInput(txtDebts.Text);
+                decimal loansPayable = ParseInput(txtLoans.Text);
+                decimal billsDue = ParseInput(txtBillsDue.Text);
+
+                if (!rbGold.Checked && !rbSilver.Checked)
+                {
+                    MessageBox.Show("Please select a Nisab standard (Gold or Silver).", "Input Required");
+                    return;
+                }
+
+                if (rbGold.Checked && ParseInput(txtGoldPerGram.Text) <= 0)
+                {
+                    MessageBox.Show("Please enter the current Gold price per gram.", "Missing Price");
+                    return;
+                }
+                else if (rbSilver.Checked && ParseInput(txtSilverPerGram.Text) <= 0)
+                {
+                    MessageBox.Show("Please enter the current Silver price per gram.", "Missing Price");
+                    return;
+                }
+
+                decimal totalAssets = cashSavings + bankBalance + goldSilverValue +
+                                      stocksValue + businessInventory + receivables + rentalIncome;
+
+                decimal totalLiabilities = debts + loansPayable + billsDue;
+
+                decimal netWealth = totalAssets - totalLiabilities;
+                finalZakatableAmount = netWealth > 0 ? netWealth : 0;
+
+                if (rbGold.Checked)
+                {
+                    goldPrice = ParseInput(txtGoldPerGram.Text);
+                    nisabThreshold = 85m * goldPrice;
+                }
+                else
+                {
+                    silverPrice = ParseInput(txtSilverPerGram.Text);
+                    nisabThreshold = 595m * silverPrice;
+                }
+
+                if (finalZakatableAmount >= nisabThreshold)
+                {
+                    zakatDue = finalZakatableAmount * 0.025m;
+                }
+                else
+                {
+                    zakatDue = 0;
+                }
+
+                lblZakatable.Text = $"Zakatable Amount - {finalZakatableAmount}";
+                lblNisab.Text = $"Nisab at time - {nisabThreshold}";
+                lblDue.Text = $"Zakat Due - {zakatDue}";
+            }
+            catch (Exception ex)
             {
-                MessageBox.Show("Please enter the current Gold price per gram.", "Missing Price");
-                return;
+                MessageBox.Show(ex.Message);
             }
-            else if (rbSilver.Checked && ParseInput(txtSilverPerGram.Text) <= 0)
-            {
-                MessageBox.Show("Please enter the current Silver price per gram.", "Missing Price");
-                return;
-            }
-
-            // CALCULATIONS
-            decimal totalAssets = cashSavings + bankBalance + goldSilverValue +
-                                  stocksValue + businessInventory + receivables + rentalIncome;
-
-            decimal totalLiabilities = debts + loansPayable + billsDue;
-
-            // Zakatable Amount 
-            decimal netWealth = totalAssets - totalLiabilities;
-
-
-            if (netWealth > 0)
-            {
-                finalZakatableAmount = netWealth;
-            }
-            else
-            {
-                finalZakatableAmount = 0;
-            }
-
-            // Determine Nisab Threshold
-
-            if (rbGold.Checked)
-            {
-                goldPrice = ParseInput(txtGoldPerGram.Text);
-                nisabThreshold = 85m * goldPrice;
-            }
-            else
-            {
-                silverPrice = ParseInput(txtSilverPerGram.Text);
-                nisabThreshold = 595m * silverPrice;
-            }
-
-            // Final Zakat Calculation
-
-            if (finalZakatableAmount >= nisabThreshold)
-            {
-                zakatDue = finalZakatableAmount * 0.025m; // 2.5%
-            }
-            else
-            {
-                zakatDue = 0; // Wealth is below Nisab
-            }
-
-            // 6. UPDATE THE UI
-            lblZakatable.Text = $"Zakatable Amount - {finalZakatableAmount}";
-            lblNisab.Text = $"Nisab at time - {nisabThreshold}";
-            lblDue.Text = $"Zakat Due - {zakatDue}";
         }
 
         private void btnDonate_Click(object sender, EventArgs e)
         {
-            // 1. Try to find the "Container" (the Main Window)
-            if (this.FindForm() is FormAdmin mainForm)
+            try
             {
-                // 2. Create the new screen we want to show
-                var donationScreen = new ucDonations(zakatDue, userID, mainForm, null);
-
-                // 3. Tell the Main Window to display it
-                mainForm.LoadControl(donationScreen);
-                return;
+                if (this.FindForm() is FormAdmin mainForm)
+                {
+                    var donationScreen = new ucDonations(zakatDue, userID, mainForm, null);
+                    mainForm.LoadControl(donationScreen);
+                }
+                else if (this.FindForm() is FormDonor mainForm2)
+                {
+                    var donationScreen = new ucDonations(zakatDue, userID, null, mainForm2);
+                    mainForm2.LoadControl(donationScreen);
+                }
             }
-            else if (this.FindForm() is FormDonor mainForm2)    
+            catch (Exception ex)
             {
-                var donationScreen = new ucDonations(zakatDue, userID, null ,mainForm2);
-                mainForm2.LoadControl(donationScreen);
-                return;
+                MessageBox.Show(ex.Message);
             }
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void gbCalculate_Enter(object sender, EventArgs e)
         {
-
         }
-
-
     }
 }

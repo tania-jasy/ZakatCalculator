@@ -18,13 +18,18 @@ namespace ZakatCalc
         public ucUsers()
         {
             InitializeComponent();
-
-            Da = new DataAccess();
-
-            //datagridview is being filled up at the very starting of the page
-            Da.PopulateGridView("select * from users", "users", dgvInfo);
-
+            try
+            {
+                Da = new DataAccess();
+                //datagridview is being filled up at the very starting of the page
+                Da.PopulateGridView("select * from users", "users", dgvInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
         //calling a method to clear all fields, will need it later in save button
         private void ClearSelections()
         {
@@ -40,11 +45,11 @@ namespace ZakatCalc
         {
             ClearSelections();
         }
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-
                 if (dgvInfo.CurrentRow == null) return;
 
                 txtID.Text = dgvInfo.CurrentRow.Cells["user_id"].Value.ToString();
@@ -52,70 +57,74 @@ namespace ZakatCalc
                 txtUserName.Text = dgvInfo.CurrentRow.Cells["Username"].Value.ToString();
                 txtPassword.Text = dgvInfo.CurrentRow.Cells["password"].Value.ToString();
                 cbUserRole.SelectedItem = dgvInfo.CurrentRow.Cells["role"].Value.ToString();
-
-
             }
             catch (Exception ex)
             {
-                MessageBox.Show("An error occurred while loading user data: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             //will do two jobs for the same button - save; to both add and update
-            //logic - the id section shall remain empty for new entries (will use clear button to do that)
             if (IsValidToSave() == false)
             {
                 MessageBox.Show("fill up all the fields");
                 return;
             }
-            string query = "select * from USERS where user_id = '" + txtID.Text + "'";
-            DataTable dt = Da.ExecuteQueryTable(query);
-            //to add
-            if (dt.Rows.Count != 1)
-            {
-                string sql = "INSERT INTO USERS (username, password, contact_no, role, is_active) VALUES('" +txtUserName.Text+"', '"+txtPassword.Text+"', '"+txtContact.Text+"', '"+cbUserRole.Text+"', 1);";
-                
-                int count = this.Da.ExecuteQuery(sql);
-                if (count == 1)
-                {
-                    MessageBox.Show("New user has been added");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to add user");
-                }
-            }
-            //to update
-            if (dt.Rows.Count == 1)
-            {
-                string sql = "UPDATE USERS SET username = '" +txtUserName.Text + "', password = '" +txtPassword.Text + "', contact_no = '"+txtContact.Text+"', role = '"+cbUserRole.Text+"' WHERE user_id = '" + txtID.Text + "'";
-                int count = this.Da.ExecuteQuery(sql);
-                if (count == 1)
-                {
-                    MessageBox.Show("User information has been updated");
-                }
-                else
-                {
-                    MessageBox.Show("Failed to update user information");
-                }
-            }
 
-            ClearSelections();
-            Da.PopulateGridView("select * from users", "users", dgvInfo);
+            try
+            {
+                string query = "select * from USERS where user_id = '" + txtID.Text + "'";
+                DataTable dt = Da.ExecuteQueryTable(query);
+
+                //to add
+                if (dt.Rows.Count != 1)
+                {
+                    string sql = "INSERT INTO USERS (username, password, contact_no, role, is_active) VALUES('" + txtUserName.Text + "', '" + txtPassword.Text + "', '" + txtContact.Text + "', '" + cbUserRole.Text + "', 1);";
+
+                    int count = this.Da.ExecuteQuery(sql);
+                    if (count == 1) MessageBox.Show("New user has been added");
+                    else MessageBox.Show("Failed to add user");
+                }
+                //to update
+                else
+                {
+                    string sql = "UPDATE USERS SET username = '" + txtUserName.Text + "', password = '" + txtPassword.Text + "', contact_no = '" + txtContact.Text + "', role = '" + cbUserRole.Text + "' WHERE user_id = '" + txtID.Text + "'";
+                    int count = this.Da.ExecuteQuery(sql);
+                    if (count == 1) MessageBox.Show("User information has been updated");
+                    else MessageBox.Show("Failed to update user information");
+                }
+
+                ClearSelections();
+                Da.PopulateGridView("select * from users", "users", dgvInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
         private bool IsValidToSave()
         {   //id should be spared while adding (database will increment it for us)
             if (String.IsNullOrEmpty(txtUserName.Text) || String.IsNullOrEmpty(txtContact.Text) || String.IsNullOrEmpty(txtPassword.Text) || cbUserRole.SelectedItem == null)
             {
                 return false;
             }
-                return true;
+            return true;
         }
+
         private void btnShowDetails_Click(object sender, EventArgs e)
         {
-            Da.PopulateGridView("select * from users", "users", dgvInfo);
-            dgvInfo.ClearSelection();
+            try
+            {
+                Da.PopulateGridView("select * from users", "users", dgvInfo);
+                dgvInfo.ClearSelection();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -125,69 +134,72 @@ namespace ZakatCalc
                 MessageBox.Show("Select one row");
                 return;
             }
-            string name = dgvInfo.CurrentRow.Cells["username"].Value.ToString();
 
-            var result = MessageBox.Show("Sure?\nUsername is - " + name + "", "Confirmation", MessageBoxButtons.YesNo);
-            
-            if (result == DialogResult.No) return;
-            
-            string sql = "Delete FROM USERS WHERE username = '" + name + "'";
-
-            int count = Da.ExecuteQuery(sql);
-           
-            if (count == 1)
+            try
             {
-                MessageBox.Show("row deleted");
-            }
-            else
-            {
-                MessageBox.Show("deletion failed");
-            }
+                string name = dgvInfo.CurrentRow.Cells["username"].Value.ToString();
+                var result = MessageBox.Show("Sure?\nUsername is - " + name + "", "Confirmation", MessageBoxButtons.YesNo);
 
-            Da.PopulateGridView("select * from users", "users", dgvInfo);
-            ClearSelections();
+                if (result == DialogResult.No) return;
+
+                string sql = "Delete FROM USERS WHERE username = '" + name + "'";
+                int count = Da.ExecuteQuery(sql);
+
+                if (count == 1) MessageBox.Show("row deleted");
+                else MessageBox.Show("deletion failed");
+
+                Da.PopulateGridView("select * from users", "users", dgvInfo);
+                ClearSelections();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            if (txtSearch.Text == null)
+            try
             {
-                MessageBox.Show("Enter a search term");
-                return;
-            }
-            string sql;
+                if (string.IsNullOrEmpty(txtSearch.Text))
+                {
+                    Da.PopulateGridView("select * from users", "users", dgvInfo);
+                    return;
+                }
 
-            if (rbUsername.Checked)
-            {
-                sql = "Select * from users where username like '%" + txtSearch.Text + "%';";
-            }
-            else if (rbContact.Checked)
-            {
-                sql = "Select * from users where contact_no like '%" + txtSearch.Text + "%';";
-            }
-            else if (rbUserRole.Checked)
-            {
-                sql = "Select * from users where role like '%" + txtSearch.Text + "%';";
-            }
-            else
-            {
-                MessageBox.Show("Select one category");
-                return;
-            }
+                string sql;
+                if (rbUsername.Checked)
+                {
+                    sql = "Select * from users where username like '%" + txtSearch.Text + "%';";
+                }
+                else if (rbContact.Checked)
+                {
+                    sql = "Select * from users where contact_no like '%" + txtSearch.Text + "%';";
+                }
+                else if (rbUserRole.Checked)
+                {
+                    sql = "Select * from users where role like '%" + txtSearch.Text + "%';";
+                }
+                else
+                {
+                    MessageBox.Show("Select one category");
+                    return;
+                }
 
-            Da.PopulateGridView(sql, "users", dgvInfo);
+                Da.PopulateGridView(sql, "users", dgvInfo);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ucUsers_Load(object sender, EventArgs e)
         {
-            
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
-
-
     }
 }

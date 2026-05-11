@@ -23,50 +23,63 @@ namespace ZakatCalc
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            string username = this.txtUsername.Text;
+            string username = this.txtUsername.Text.Trim();
             string password = this.txtPassword.Text;
-            
-            //Form Validation
 
+            // Form Validation
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             {
                 MessageBox.Show("Please enter both username and password.");
                 return;
             }
-            // Pulling from DataAccess Class Metho
-            string userRole = Da.LoginOnUserRole(username, password);
-            
-            string sqlQuery = $"SELECT user_id FROM Users WHERE username = '{username}' AND password = '{password}'";
 
-            DataTable dt = Da.ExecuteQueryTable(sqlQuery);
-
-            int userID = Convert.ToInt32(dt.Rows[0]["user_id"]);
-            if (userRole != null)
+            try
             {
-                //holding the parent form here, in a variable
-                FormLoginReg loginForm = (FormLoginReg)this.FindForm();
+                // Attempting to retrieve user role via DataAccess
+                string userRole = Da.LoginOnUserRole(username, password);
 
-                if (userRole == "admin")
+                if (userRole != null)
                 {
-                    FormAdmin adminWindow = new FormAdmin(username, (FormLoginReg)this.FindForm(), userRole, userID);
-                    loginForm.Hide();
-                    adminWindow.Show();
-                }
-                else if (userRole == "donor")
-                {
-                    FormDonor donorWindow = new FormDonor(username, (FormLoginReg)this.FindForm(), userRole, userID);
-                    loginForm.Hide();
-                    donorWindow.Show();
+                    // Fetching UserID separately
+                    string sqlQuery = $"SELECT user_id FROM Users WHERE username = '{username}' AND password = '{password}'";
+                    DataTable dt = Da.ExecuteQueryTable(sqlQuery);
+
+                    // Check if the DataTable returned any rows before accessing
+                    if (dt == null || dt.Rows.Count == 0)
+                    {
+                        MessageBox.Show("User details could not be retrieved.");
+                        return;
+                    }
+
+                    int userID = Convert.ToInt32(dt.Rows[0]["user_id"]);
+                    FormLoginReg loginForm = (FormLoginReg)this.FindForm();
+
+                    // Logic for navigating to specific dashboards based on role
+                    if (userRole.Equals("admin", StringComparison.OrdinalIgnoreCase))
+                    {
+                        FormAdmin adminWindow = new FormAdmin(username, loginForm, userRole, userID);
+                        loginForm.Hide();
+                        adminWindow.Show();
+                    }
+                    else if (userRole.Equals("donor", StringComparison.OrdinalIgnoreCase))
+                    {
+                        FormDonor donorWindow = new FormDonor(username, loginForm, userRole, userID);
+                        loginForm.Hide();
+                        donorWindow.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Role '{userRole}' is not recognized.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show($"Login successful, but role '{userRole}' is not recognized.");
-                    this.FindForm().Close();
+                    MessageBox.Show("Invalid username or password.");
                 }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("Invalid username or password.");
+                MessageBox.Show(ex.Message);
             }
         }
 

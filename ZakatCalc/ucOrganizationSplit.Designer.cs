@@ -30,15 +30,15 @@
         {
             lblHeader = new System.Windows.Forms.Label();
             dgvOrgSplit = new System.Windows.Forms.DataGridView();
-            btnBack = new System.Windows.Forms.Button();
-            btnDonate = new System.Windows.Forms.Button();
-            cbAutoSplit = new System.Windows.Forms.CheckBox();
             select = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             org_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             category = new System.Windows.Forms.DataGridViewTextBoxColumn();
             bank_details = new System.Windows.Forms.DataGridViewTextBoxColumn();
             percentage = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            btnBack = new System.Windows.Forms.Button();
+            btnDonate = new System.Windows.Forms.Button();
+            cbAutoSplit = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)dgvOrgSplit).BeginInit();
             SuspendLayout();
             // 
@@ -64,39 +64,8 @@
             dgvOrgSplit.Size = new System.Drawing.Size(784, 413);
             dgvOrgSplit.TabIndex = 1;
             dgvOrgSplit.CellContentClick += dgvOrgSplit_CellContentClick;
-            dgvOrgSplit.EditingControlShowing += dgvOrgSplit_EditingControlShowing;
-            // 
-            // btnBack
-            // 
-            btnBack.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnBack.Location = new System.Drawing.Point(3, 18);
-            btnBack.Name = "btnBack";
-            btnBack.Size = new System.Drawing.Size(75, 38);
-            btnBack.TabIndex = 2;
-            btnBack.Text = "<--";
-            btnBack.UseVisualStyleBackColor = true;
-            btnBack.Click += btnBack_Click;
-            // 
-            // btnDonate
-            // 
-            btnDonate.Location = new System.Drawing.Point(621, 538);
-            btnDonate.Name = "btnDonate";
-            btnDonate.Size = new System.Drawing.Size(152, 45);
-            btnDonate.TabIndex = 4;
-            btnDonate.Text = "Donate";
-            btnDonate.UseVisualStyleBackColor = true;
-            btnDonate.Click += btnDonate_Click;
-            // 
-            // cbAutoSplit
-            // 
-            cbAutoSplit.AutoSize = true;
-            cbAutoSplit.Location = new System.Drawing.Point(695, 513);
-            cbAutoSplit.Name = "cbAutoSplit";
-            cbAutoSplit.Size = new System.Drawing.Size(78, 19);
-            cbAutoSplit.TabIndex = 5;
-            cbAutoSplit.Text = "Auto Split";
-            cbAutoSplit.UseVisualStyleBackColor = true;
-            cbAutoSplit.CheckedChanged += cbAutoSplit_CheckedChanged;
+            dgvOrgSplit.CellValidated += dgvOrgSplit_CellValidated;
+            dgvOrgSplit.CellValidating += dgvOrgSplit_CellValidating;
             // 
             // select
             // 
@@ -143,6 +112,38 @@
             percentage.DataPropertyName = "percentage";
             percentage.HeaderText = "Percentage";
             percentage.Name = "percentage";
+            // 
+            // btnBack
+            // 
+            btnBack.Font = new System.Drawing.Font("SimSun", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnBack.Location = new System.Drawing.Point(3, 18);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new System.Drawing.Size(75, 38);
+            btnBack.TabIndex = 2;
+            btnBack.Text = "<--";
+            btnBack.UseVisualStyleBackColor = true;
+            btnBack.Click += btnBack_Click;
+            // 
+            // btnDonate
+            // 
+            btnDonate.Location = new System.Drawing.Point(621, 538);
+            btnDonate.Name = "btnDonate";
+            btnDonate.Size = new System.Drawing.Size(152, 45);
+            btnDonate.TabIndex = 4;
+            btnDonate.Text = "Donate";
+            btnDonate.UseVisualStyleBackColor = true;
+            btnDonate.Click += btnDonate_Click;
+            // 
+            // cbAutoSplit
+            // 
+            cbAutoSplit.AutoSize = true;
+            cbAutoSplit.Location = new System.Drawing.Point(695, 513);
+            cbAutoSplit.Name = "cbAutoSplit";
+            cbAutoSplit.Size = new System.Drawing.Size(78, 19);
+            cbAutoSplit.TabIndex = 5;
+            cbAutoSplit.Text = "Auto Split";
+            cbAutoSplit.UseVisualStyleBackColor = true;
+            cbAutoSplit.CheckedChanged += cbAutoSplit_CheckedChanged;
             // 
             // ucOrganizationSplit
             // 
