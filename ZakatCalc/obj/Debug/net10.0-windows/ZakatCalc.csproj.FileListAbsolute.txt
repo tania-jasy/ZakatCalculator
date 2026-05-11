@@ -63,3 +63,6 @@ C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debu
 C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\net10.0-windows\ref\ZakatCalc.dll
 C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\net10.0-windows\ZakatCalc.ucDonations.resources
 C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\net10.0-windows\ZakatCalc.ucOrganizationSplit.resources
+C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\net10.0-windows\ZakatCalc.FormReciept.resources
+C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\net10.0-windows\ZakatCalc.ucStatements.resources
+C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\net10.0-windows\ZakatCalc.ucHistory.resources

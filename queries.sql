@@ -173,3 +173,24 @@ VALUES
 
 SELECT * FROM DONATION_SPLITS
 
+--CREATING RECIEPTS TABLE
+
+USE Project;
+GO
+
+CREATE TABLE RECEIPTS (
+    receipt_id INT IDENTITY(1,1) PRIMARY KEY,
+    donation_id INT UNIQUE NOT NULL, -- UNIQUE ensures 1-to-1 relationship
+    transaction_id VARCHAR(100),    -- To be displayed on the PDF
+    issued_at DATETIME DEFAULT GETDATE(),
+
+    -- Link to DONATIONS table
+    CONSTRAINT FK_ReceiptDonation FOREIGN KEY (donation_id) 
+    REFERENCES DONATIONS(donation_id) ON DELETE CASCADE
+);
+GO
+
+Select * from RECEIPTS
+-- (reciept_id, donation_id, transaction_id, issued_at)
+INSERT INTO RECEIPTS (donation_id, transaction_id)
+VALUES (1, 'REC-2026-XYZ-001');

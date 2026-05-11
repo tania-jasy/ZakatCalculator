@@ -59,15 +59,25 @@ namespace ZakatCalc
             LoadControl(new ucCalculator(userRole, userID));
         }
 
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            LoadControl(new ucDonorProfile(name, prevForm, this));
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+
+        }
         private void btnLog_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             prevForm.Show();
         }
 
-        private void btnProfile_Click(object sender, EventArgs e)
+        private void btnHistory_Click_1(object sender, EventArgs e)
         {
-            LoadControl(new ucDonorProfile(name, prevForm, this));
+            LoadControl(new ucHistory(userID));
         }
     }
 }

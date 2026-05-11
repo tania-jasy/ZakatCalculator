@@ -11,10 +11,19 @@
     <Compile Update="FormLoginReg.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="FormReciept.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ucDonations.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ucHistory.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="ucOrganizationSplit.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="ucStatements.cs">
       <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>

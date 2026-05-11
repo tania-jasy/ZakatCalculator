@@ -57,14 +57,18 @@ namespace ZakatCalc
         {
             LoadControl(new ucOrganizations());
         }
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStats_Click(object sender, EventArgs e)
         {
-
+            LoadControl(new ucStatements());
         }
-
         private void FormAdmin_FormClosing(object sender, FormClosingEventArgs e)
         {
             prevForm.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void btnLog_Click(object sender, EventArgs e)

@@ -79,8 +79,10 @@
             // 
             txtTrnxID.Location = new System.Drawing.Point(391, 309);
             txtTrnxID.Name = "txtTrnxID";
+            txtTrnxID.ReadOnly = true;
             txtTrnxID.Size = new System.Drawing.Size(151, 23);
             txtTrnxID.TabIndex = 4;
+            txtTrnxID.TextChanged += txtTrnxID_TextChanged;
             // 
             // cbPayment
             // 

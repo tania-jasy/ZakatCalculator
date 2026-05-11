@@ -28,44 +28,44 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pnlRegLogin = new System.Windows.Forms.Panel();
-            this.cbReg = new System.Windows.Forms.CheckBox();
-            this.SuspendLayout();
+            pnlRegLogin = new System.Windows.Forms.Panel();
+            cbReg = new System.Windows.Forms.CheckBox();
+            SuspendLayout();
             // 
             // pnlRegLogin
             // 
-            this.pnlRegLogin.Location = new System.Drawing.Point(9, 81);
-            this.pnlRegLogin.Margin = new System.Windows.Forms.Padding(2);
-            this.pnlRegLogin.Name = "pnlRegLogin";
-            this.pnlRegLogin.Size = new System.Drawing.Size(274, 314);
-            this.pnlRegLogin.TabIndex = 0;
+            pnlRegLogin.Location = new System.Drawing.Point(10, 93);
+            pnlRegLogin.Margin = new System.Windows.Forms.Padding(2);
+            pnlRegLogin.Name = "pnlRegLogin";
+            pnlRegLogin.Size = new System.Drawing.Size(320, 362);
+            pnlRegLogin.TabIndex = 0;
             // 
             // cbReg
             // 
-            this.cbReg.AutoSize = true;
-            this.cbReg.Location = new System.Drawing.Point(106, 60);
-            this.cbReg.Margin = new System.Windows.Forms.Padding(2);
-            this.cbReg.Name = "cbReg";
-            this.cbReg.Size = new System.Drawing.Size(82, 17);
-            this.cbReg.TabIndex = 1;
-            this.cbReg.Text = "Registration";
-            this.cbReg.UseVisualStyleBackColor = true;
-            this.cbReg.CheckedChanged += new System.EventHandler(this.cbReg_CheckedChanged);
+            cbReg.AutoSize = true;
+            cbReg.Location = new System.Drawing.Point(124, 69);
+            cbReg.Margin = new System.Windows.Forms.Padding(2);
+            cbReg.Name = "cbReg";
+            cbReg.Size = new System.Drawing.Size(89, 19);
+            cbReg.TabIndex = 1;
+            cbReg.Text = "Registration";
+            cbReg.UseVisualStyleBackColor = true;
+            cbReg.CheckedChanged += cbReg_CheckedChanged;
             // 
             // FormLoginReg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(292, 405);
-            this.Controls.Add(this.cbReg);
-            this.Controls.Add(this.pnlRegLogin);
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormLoginReg";
-            this.Text = "Login and Registration";
-            this.Load += new System.EventHandler(this.FormLoginReg_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            BackColor = System.Drawing.SystemColors.ButtonFace;
+            ClientSize = new System.Drawing.Size(341, 467);
+            Controls.Add(cbReg);
+            Controls.Add(pnlRegLogin);
+            Margin = new System.Windows.Forms.Padding(2);
+            Name = "FormLoginReg";
+            Text = "Login and Registration";
+            Load += FormLoginReg_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

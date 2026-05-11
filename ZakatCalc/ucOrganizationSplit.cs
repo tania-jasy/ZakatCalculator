@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Text;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace ZakatCalc
@@ -17,13 +18,15 @@ namespace ZakatCalc
         FormDonor Fd;
         int DonationId;
         decimal Amount;
-        public ucOrganizationSplit(FormAdmin admin = null, FormDonor donor = null, int donationId = 0, decimal amount = 0)
+        string trnxID;  
+        public ucOrganizationSplit(FormAdmin admin = null, FormDonor donor = null, int donationId = 0, decimal amount = 0, string trnxID = "")
         {
             InitializeComponent();
             Da = new DataAccess();
 
             DonationId = donationId;
             Amount = amount;
+            this.trnxID = trnxID;
 
             if (admin != null) { Fa = admin; }
             if (donor != null) { Fd = donor; }
@@ -139,7 +142,16 @@ namespace ZakatCalc
                 Da.ExecuteQuery(query);
             }
 
+            string receiptQuery =
+                "INSERT INTO RECEIPTS (donation_id, transaction_id, issued_at) VALUES (" + DonationId + ", '" + trnxID + "', GETDATE()); " +
+                "SELECT SCOPE_IDENTITY();";  // or LAST_INSERT_ID() if MySQL
+
+            int receiptId = Convert.ToInt32(Da.ExecuteScalar(receiptQuery));
+
             MessageBox.Show("Donation split saved successfully!");
+
+            FormReciept receipt = new FormReciept(DonationId, Amount, receiptId, trnxID);
+            receipt.Show();
 
         }
 

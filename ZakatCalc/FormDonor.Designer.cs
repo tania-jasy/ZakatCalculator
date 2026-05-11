@@ -39,8 +39,8 @@
             button5 = new System.Windows.Forms.Button();
             label1 = new System.Windows.Forms.Label();
             pnlButtonsContainer = new System.Windows.Forms.Panel();
-            btnLog = new System.Windows.Forms.Button();
             btnHistory = new System.Windows.Forms.Button();
+            btnLog = new System.Windows.Forms.Button();
             btnProfile = new System.Windows.Forms.Button();
             btnCalc = new System.Windows.Forms.Button();
             lblWelcome = new System.Windows.Forms.Label();
@@ -163,8 +163,8 @@
             // 
             // pnlButtonsContainer
             // 
-            pnlButtonsContainer.Controls.Add(btnLog);
             pnlButtonsContainer.Controls.Add(btnHistory);
+            pnlButtonsContainer.Controls.Add(btnLog);
             pnlButtonsContainer.Controls.Add(btnProfile);
             pnlButtonsContainer.Controls.Add(btnCalc);
             pnlButtonsContainer.Controls.Add(lblWelcome);
@@ -175,6 +175,18 @@
             pnlButtonsContainer.Name = "pnlButtonsContainer";
             pnlButtonsContainer.Size = new System.Drawing.Size(245, 620);
             pnlButtonsContainer.TabIndex = 3;
+            // 
+            // btnHistory
+            // 
+            btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
+            btnHistory.Location = new System.Drawing.Point(13, 461);
+            btnHistory.Margin = new System.Windows.Forms.Padding(2);
+            btnHistory.Name = "btnHistory";
+            btnHistory.Size = new System.Drawing.Size(219, 45);
+            btnHistory.TabIndex = 11;
+            btnHistory.Text = "History";
+            btnHistory.UseVisualStyleBackColor = true;
+            btnHistory.Click += btnHistory_Click_1;
             // 
             // btnLog
             // 
@@ -188,21 +200,10 @@
             btnLog.UseVisualStyleBackColor = true;
             btnLog.Click += btnLog_Click_1;
             // 
-            // btnHistory
-            // 
-            btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnHistory.Location = new System.Drawing.Point(13, 443);
-            btnHistory.Margin = new System.Windows.Forms.Padding(2);
-            btnHistory.Name = "btnHistory";
-            btnHistory.Size = new System.Drawing.Size(219, 45);
-            btnHistory.TabIndex = 9;
-            btnHistory.Text = "History";
-            btnHistory.UseVisualStyleBackColor = true;
-            // 
             // btnProfile
             // 
             btnProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnProfile.Location = new System.Drawing.Point(13, 377);
+            btnProfile.Location = new System.Drawing.Point(13, 398);
             btnProfile.Margin = new System.Windows.Forms.Padding(2);
             btnProfile.Name = "btnProfile";
             btnProfile.Size = new System.Drawing.Size(219, 45);
@@ -214,7 +215,7 @@
             // btnCalc
             // 
             btnCalc.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0);
-            btnCalc.Location = new System.Drawing.Point(13, 316);
+            btnCalc.Location = new System.Drawing.Point(13, 337);
             btnCalc.Margin = new System.Windows.Forms.Padding(2);
             btnCalc.Name = "btnCalc";
             btnCalc.Size = new System.Drawing.Size(219, 45);
@@ -283,9 +284,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnLog;
-        private System.Windows.Forms.Button btnHistory;
         private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Button btnCalc;
         private System.Windows.Forms.Label lblWelcome;
+        private System.Windows.Forms.Button btnHistory;
     }
 }
