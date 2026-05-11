@@ -30,3 +30,4 @@ C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debu
 C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\ZakatCalc.pdb
 C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\ZakatCalc.ucUsers.resources
 C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\ZakatCalc.ucOrganizations.resources
+C:\Users\Administrator\Documents\strikesAgain\ZakatCalculator\ZakatCalc\obj\Debug\ZakatCalc.ucCalculator.resources

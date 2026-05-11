@@ -49,7 +49,7 @@ namespace ZakatCalc
 
         private void btnCalc_Click(object sender, EventArgs e)
         {
-
+            LoadControl(new ucCalculator());
         }
 
         private void btnLog_Click_1(object sender, EventArgs e)

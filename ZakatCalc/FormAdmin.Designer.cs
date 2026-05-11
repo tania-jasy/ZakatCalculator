@@ -136,6 +136,7 @@
             this.btnCalc.TabIndex = 8;
             this.btnCalc.Text = "Calculator";
             this.btnCalc.UseVisualStyleBackColor = true;
+            this.btnCalc.Click += new System.EventHandler(this.btnCalc_Click);
             // 
             // pnlHolder
             // 

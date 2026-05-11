@@ -37,6 +37,10 @@ namespace ZakatCalc
         {
             lblWelcome.Text = "Welcome\n " + name;
         }
+        private void btnCalc_Click(object sender, EventArgs e)
+        {
+            LoadControl(new ucCalculator());
+        }
         private void btnUsers_Click(object sender, EventArgs e)
         {
             LoadControl(new ucUsers());
@@ -70,6 +74,7 @@ namespace ZakatCalc
         {
 
         }
+
 
     }
 }

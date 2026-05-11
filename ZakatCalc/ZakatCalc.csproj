@@ -67,6 +67,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucCalculator.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCalculator.Designer.cs">
+      <DependentUpon>ucCalculator.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucDonorProfile.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -115,6 +121,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucCalculator.resx">
+      <DependentUpon>ucCalculator.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucDonorProfile.resx">
       <DependentUpon>ucDonorProfile.cs</DependentUpon>
     </EmbeddedResource>
