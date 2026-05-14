@@ -60,74 +60,45 @@ namespace ZakatCalc
         {
             try
             {
-                // If they unchecked the box, just stop and do nothing
-                if (cbAutoSplit.Checked == false)
-                {
-                    return;
-                }
+                // If they turn it off, just stop.
+                if (cbAutoSplit.Checked == false) return;
 
-                // Create a list to hold all the rows the user checked
-                List<DataGridViewRow> checkedRows = new List<DataGridViewRow>();
+                // 1. Find all the rows that are actually checked
+                List<DataGridViewRow> selectedRows = new List<DataGridViewRow>();
 
-                // Loop through every single row in the grid
                 foreach (DataGridViewRow row in dgvOrgSplit.Rows)
                 {
-                    // Get the value of the "Select" checkbox cell
-                    object cellValue = row.Cells["Select"].Value;
-                    bool isSelected = Convert.ToBoolean(cellValue);
+                    // Clear the percentage immediately while we are looking at the row
+                    row.Cells["Percentage"].Value = "";
 
-                    // If it is checked, add it to our list
+                    bool isSelected = Convert.ToBoolean(row.Cells["Select"].Value);
                     if (isSelected == true)
                     {
-                        checkedRows.Add(row);
+                        selectedRows.Add(row);
                     }
                 }
 
-                // If they checked the Auto Split box but didn't select any organizations, warn them
-                if (checkedRows.Count == 0)
+                // 2. Check if we have enough to split
+                if (selectedRows.Count == 0)
                 {
-                    MessageBox.Show("Please select at least one organization before using Auto Split.");
-                    cbAutoSplit.Checked = false; // Uncheck the box automatically
+                    MessageBox.Show("Select some rows first!");
+                    cbAutoSplit.Checked = false;
                     return;
                 }
 
-                // Clear out any old numbers from the percentage column for all rows
-                foreach (DataGridViewRow row in dgvOrgSplit.Rows)
+                // 3. Do the simple math
+                // Using '100m' tells C# this is a Decimal (money), not a whole number.
+                decimal share = 100m / selectedRows.Count;
+
+                // 4. Put that number into every checked row
+                foreach (DataGridViewRow row in selectedRows)
                 {
-                    row.Cells["Percentage"].Value = "";
-                }
-
-                // Figure out what the equal piece of the pie is (100 divided by number of selected rows)
-                decimal countDecimal = Convert.ToDecimal(checkedRows.Count);
-                decimal equalAmount = 100m / countDecimal;
-                decimal roundedEqualAmount = Math.Round(equalAmount, 2);
-
-                // Keep track of how much percentage we have handed out so far
-                decimal totalAssignedSoFar = 0;
-
-                // Loop through the selected rows to hand out the percentages
-                for (int i = 0; i < checkedRows.Count; i++)
-                {
-                    DataGridViewRow currentRow = checkedRows[i];
-
-                    // If this is the very last row, give it whatever is leftover so we hit exactly 100%
-                    if (i == checkedRows.Count - 1)
-                    {
-                        decimal leftOver = 100m - totalAssignedSoFar;
-                        decimal roundedLeftOver = Math.Round(leftOver, 2);
-                        currentRow.Cells["Percentage"].Value = roundedLeftOver.ToString("0.##");
-                    }
-                    else
-                    {
-                        // If it's not the last row, just give it the normal equal amount
-                        currentRow.Cells["Percentage"].Value = roundedEqualAmount.ToString("0.##");
-                        totalAssignedSoFar = totalAssignedSoFar + roundedEqualAmount;
-                    }
+                    row.Cells["Percentage"].Value = share;
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -136,134 +107,97 @@ namespace ZakatCalc
         {
             try
             {
-                // Instead of a complex tuple, let's use two simple lists to store our data
-                List<int> selectedOrgIds = new List<int>();
-                List<decimal> selectedPercentages = new List<decimal>();
+                // Simple lists to store data we find in the grid
+                List<int> idList = new List<int>();
+                List<decimal> percentList = new List<decimal>();
 
-                // Step 1: Loop through the grid to find all selected rows
-                foreach (DataGridViewRow row in dgvOrgSplit.Rows)
+                foreach (DataGridViewRow currentRow in dgvOrgSplit.Rows)
                 {
-                    object selectCellValue = row.Cells["Select"].Value;
-                    bool isSelected = Convert.ToBoolean(selectCellValue);
+                    // Just convert whatever is in the 'Select' box to a true/false
+                    bool isChecked = Convert.ToBoolean(currentRow.Cells["Select"].Value);
 
-                    // Only look at the rows that are checked
-                    if (isSelected == true)
+                    // If it's not checked, skip this row and move to the next one immediately
+                    if (isChecked == false) continue;
+
+                    object cellValue = currentRow.Cells["Percentage"].Value;
+
+                    // Check for empty or null
+                    if (cellValue == null || cellValue.ToString() == "")
                     {
-                        // Get the text from the percentage box
-                        object pctCellValue = row.Cells["Percentage"].Value;
-
-                        // If the cell is totally blank, show an error
-                        if (pctCellValue == null)
-                        {
-                            MessageBox.Show("All selected rows must add up to 100%.");
-                            return;
-                        }
-
-                        // Convert it to a string and remove any blank spaces
-                        string rawPct = pctCellValue.ToString();
-                        rawPct = rawPct.Trim();
-
-                        // If it's an empty string, show an error
-                        if (rawPct == "")
-                        {
-                            MessageBox.Show("All selected rows must add up to 100%.");
-                            return;
-                        }
-
-                        // Try to turn the text into an actual decimal number
-                        decimal pctNumber;
-                        bool isNumber = decimal.TryParse(rawPct, out pctNumber);
-
-                        // If it wasn't a valid number, or if it is 0 or less, show an error
-                        if (isNumber == false || pctNumber <= 0)
-                        {
-                            MessageBox.Show("All selected rows must add up to 100%.");
-                            return;
-                        }
-
-                        // Get the ID of the organization
-                        int orgId = Convert.ToInt32(row.Cells["org_id"].Value);
-
-                        // Add the data to our lists
-                        selectedOrgIds.Add(orgId);
-                        selectedPercentages.Add(pctNumber);
+                        MessageBox.Show("Fill in all percentages!");
+                        return;
                     }
+
+                    // Convert to decimal. If it's ugly or has letters, this will jump to 'catch'
+                    decimal myPercent = Convert.ToDecimal(cellValue);
+
+                    if (myPercent <= 0)
+                    {
+                        MessageBox.Show("Percent must be positive!");
+                        return;
+                    }
+
+                    // Save the ID and the Percent for later
+                    int myId = Convert.ToInt32(currentRow.Cells["org_id"].Value);
+                    idList.Add(myId);
+                    percentList.Add(myPercent);
                 }
 
-                // Step 2: Make sure they actually selected at least one organization
-                if (selectedOrgIds.Count == 0)
+                if (idList.Count == 0)
                 {
-                    MessageBox.Show("Please select at least one organization.");
+                    MessageBox.Show("Pick at least one organization.");
                     return;
                 }
 
-                // Step 3: If Auto Split is off, we have to manually check if they add up to 100%
                 if (cbAutoSplit.Checked == false)
                 {
-                    decimal totalPercentage = 0;
-
-                    // Add up all the percentages in our list
-                    for (int i = 0; i < selectedPercentages.Count; i++)
+                    decimal sum = 0;
+                    foreach (decimal p in percentList)
                     {
-                        totalPercentage = totalPercentage + selectedPercentages[i];
+                        sum = sum + p;
                     }
 
-                    // Math.Abs makes sure we get a positive difference, in case of weird decimal math
-                    decimal difference = Math.Abs(totalPercentage - 100m);
-
-                    // If the total is off by more than 0.01, reject it
-                    if (difference > 0.01m)
+                    if (sum != 100)
                     {
-                        string errorMessage = "Percentages must add up to 100%. Current total: " + totalPercentage.ToString("0.##") + "%";
-                        MessageBox.Show(errorMessage);
+                        MessageBox.Show("Total is " + sum + "%, but it needs to be 100%.");
                         return;
                     }
                 }
 
-                // Step 4: Save the splits to the database
-                for (int i = 0; i < selectedOrgIds.Count; i++)
+                for (int i = 0; i < idList.Count; i++)
                 {
-                    int currentOrgId = selectedOrgIds[i];
-                    decimal currentPercentage = selectedPercentages[i];
+                    // Basic math: Amount times the percentage (divided by 100)
+                    decimal money = Amount * (percentList[i] / 100);
+                    decimal roundedMoney = Math.Round(money, 2);
 
-                    // Calculate how much actual money this percentage represents
-                    decimal moneyToGive = Amount * (currentPercentage / 100m);
-                    decimal roundedMoney = Math.Round(moneyToGive, 2);
+                    // Building the SQL string manually
+                    string sql = "INSERT INTO DONATION_SPLITS (donation_id, org_id, amount, percentage) VALUES ("
+                               + DonationId + ", "
+                               + idList[i] + ", "
+                               + roundedMoney + ", "
+                               + percentList[i] + ")";
 
-                    // Build the SQL query
-                    string query = "INSERT INTO DONATION_SPLITS (donation_id, org_id, amount, percentage) VALUES (";
-                    query = query + DonationId + ", ";
-                    query = query + currentOrgId + ", ";
-                    query = query + roundedMoney + ", ";
-                    query = query + currentPercentage + ")";
-
-                    // Run the query
-                    Da.ExecuteQuery(query);
+                    Da.ExecuteQuery(sql);
                 }
 
-                // Step 5: Save a receipt to the database
-                string receiptQuery = "INSERT INTO RECEIPTS (donation_id, transaction_id, issued_at) VALUES (";
-                receiptQuery = receiptQuery + DonationId + ", ";
-                receiptQuery = receiptQuery + "'" + trnxID + "', GETDATE()); ";
-                receiptQuery = receiptQuery + "SELECT SCOPE_IDENTITY();"; // This asks SQL for the ID it just created
+                string sqlReceipt = "INSERT INTO RECEIPTS (donation_id, transaction_id, issued_at) VALUES ("
+                                  + DonationId + ", '" + trnxID + "', GETDATE()); "
+                                  + "SELECT SCOPE_IDENTITY();";
 
-                // Get the new Receipt ID from the database
-                object newReceiptIdObject = Da.ExecuteScalar(receiptQuery);
-                if (newReceiptIdObject == null) throw new Exception("Failed to generate receipt ID.");
+                // Get the new ID from the database
+                object result = Da.ExecuteScalar(sqlReceipt);
+                int newReceiptId = Convert.ToInt32(result);
 
-                int receiptId = Convert.ToInt32(newReceiptIdObject);
+                MessageBox.Show("All done! Saving receipt...");
 
-                // Tell the user everything went well
-                MessageBox.Show("Donation split saved successfully!");
-
-                // Step 6: Open up the final receipt screen
-                FormReciept receiptScreen = new FormReciept(DonationId, Amount, receiptId, trnxID);
+                // Open the next screen
+                FormReciept nextForm = new FormReciept(DonationId, Amount, newReceiptId, trnxID);
                 this.Hide();
-                receiptScreen.Show();
+                nextForm.Show();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 

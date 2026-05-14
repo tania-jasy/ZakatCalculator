@@ -83,5 +83,10 @@ namespace ZakatCalc
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgv.RowHeadersVisible = false;
         }
+
+        private void lblDonations_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

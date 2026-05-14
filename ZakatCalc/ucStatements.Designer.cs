@@ -73,6 +73,7 @@
             lblDonations.Size = new System.Drawing.Size(25, 30);
             lblDonations.TabIndex = 8;
             lblDonations.Text = "0";
+            lblDonations.Click += lblDonations_Click;
             // 
             // panel2
             // 
